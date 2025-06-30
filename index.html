@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IBM SkillsBuild Village</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="app">
+    
+    <!-- Top Bar -->
+    <header class="top-bar">
+        <div class="left-info">
+            <div id="player-info">🧑‍💻 Player: <span id="player-name">Loading...</span></div>
+            <div id="village-level">🛖 Village Level: <span id="village-level-count">0</span></div>
+          </div>
+          <div class="right-resources">
+            <div id="data-packet">📊: <span id="data-packet-count">0</span></div>
+            <div id="security-token">🔐: <span id="security-token-count">0</span></div>
+            <div id="processing-unit">💾: <span id="processing-unit-count">0</span></div>
+            <div id="electricity">⚡: <span id="electricity-count">0</span></div>
+          </div>
+    </header>
+
+    <!-- Main Grid -->
+    <div class="main-grid">
+      
+      <!-- Side Menu -->
+      <nav class="side-menu">
+          <div class="top-buttons">
+              <button id="btn-village">🏡 My Village</button>
+              <button id="btn-map">🗺️ Map</button>
+              <!-- <button id="btn-data-quiz">📘 Data Training</button> -->
+              <button id="btn-data-quiz">📘 Data Training</button>
+              <!-- <button id="btn-upgrades">⚙️ Upgrades</button> -->
+          </div>
+          <div class="bottom-buttons">
+              <button id="btn-profile">👤 Profile</button>
+              <button id="btn-setting">⚙️ Setting</button>
+          </div>
+      </nav>
+
+      <!-- Main Game Content -->
+      <main class="game-content" id="game-container">
+        <p>Loading game...</p>
+      </main>
+    </div>
+
+    <!-- Footer (optional) -->
+    <footer class="footer">
+      <p>IBM SkillsBuild Strategy Game © 2025</p>
+    </footer>
+
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+  <!-- <script type="module" src="js/dialog.js"></script> -->
+</body>
+</html>

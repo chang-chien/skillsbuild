@@ -1,0 +1,83 @@
+<section class="village-screen">
+  <div class="building wall-img" data-title="Wall" data-type="info">
+    <img src="../assets/images/building/wallL1.png" alt="Wall Level 1">
+    <span class="label">Wall: Level 1</span>
+  </div>
+
+  <div class="building ai-img" data-title="AI Center" data-type="info">
+    <img src="../assets/images/building/aiL1.png" alt="AI Center Level 1">
+    <span class="label">AI Center: Level 1</span>
+  </div>
+
+  <div class="building electric-img" data-title="Electric Plant" data-type="info">
+    <img src="../assets/images/building/electricL1.png" alt="Electric Plant Level 1">
+    <span class="label">Electric Plant: Level 1<br>⚡ 100 / hour</span>
+  </div>
+
+  <div class="building defense-img" id="defense" data-title="Defense System" data-type="quiz">
+    <img src="../assets/images/building/defenseL1.png" alt="Defense System Level 1">
+    <span class="label">Defense System: Level 1<br>🔐 100 / hour</span>
+  </div>
+
+  <div class="building compute-img" id="compute" data-title="Compute Node" data-type="quiz">
+    <img src="../assets/images/building/computeL1.png" alt="Compute Node Level 1">
+    <span class="label">Compute Node: Level 1<br>📊 100 / hour</span>
+  </div>
+
+  <div class="building data-img" id="data" data-title="Data Center" data-type="quiz">
+    <img src="../assets/images/building/dataL1.png" alt="Data Center Level 1">
+    <span class="label">Data Center: Level 1<br>💾 100 / hour</span>
+  </div>
+</section>
+
+<style>
+  .village-screen {
+    position: relative;
+    height: 100%;
+    background-image: url('../assets/images/villageBG.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+
+  .building {
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .building img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .label {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 13px;
+    border-radius: 4px;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 20;
+  }
+  
+  .building:hover .label {
+    display: block;
+  }
+
+  /* Building-specific positions */
+  .wall-img   { top: 30%; right: 30%; width: 500px; z-index: 10; }
+  .ai-img     { top: 30%; right: 43%; width: 150px; z-index: 10; }
+  .electric-img { top: 0px; right: 10px; width: 200px; z-index: 10; }
+  .defense-img { bottom: 20px; left: 40px; width: 150px; z-index: 10; }
+  .compute-img { top: 10px; left: 40px; width: 150px; z-index: 10; }
+  .data-img    { bottom: 25px; right: 60px; width: 150px; z-index: 10; }
+</style>

@@ -1,0 +1,12 @@
+[
+    {
+      "question": "What does CPU stand for?",
+      "options": ["Central Processing Unit", "Computer Processing Unit", "Central Programming Utility", "Core Processing Unit"],
+      "answer": "Central Processing Unit"
+    },
+    {
+      "question": "Which is a frontend language?",
+      "options": ["Python", "Java", "HTML", "SQL"],
+      "answer": "HTML"
+    }
+  ]

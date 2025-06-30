@@ -1,0 +1,118 @@
+<section class="quiz-section">
+  <div class="quiz-container">
+    <!-- Left: NPC Image -->
+    <div class="npc-panel">
+      <img src="../assets/images/avatar/npc_data_mentor.png" alt="Elder Ava">
+      <p class="npc-name">Elder Ava</p>
+    </div>
+
+    <!-- Right: Dialogue + Choices -->
+    <div class="dialogue-panel">
+      <div class="dialogue-box" id="dialogue-text">
+        <!-- <p><strong>Elder Ava:</strong> Tribal Leader, you’ve arrived! The fate of our village rests not on brute strength, but on wisdom that hidden in something the ancients called… data. Before you lead warriors into strategy or trade, you must first learn to lead with knowledge. Will you heed this duty?</p> -->
+      </div>
+
+      <div class="choice-box">
+        <!-- <button class="choice" data-next="section01_intro">I’m ready. Tell me what must be done.</button>
+        <button class="choice" data-next="section01_guide">Skip the ritual, just tell me where to click.</button> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .quiz-section {
+    position: relative;
+    height: 100%; /* Full viewport height for vertical centering */
+    background-image: url('../assets/images/villageBG.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem; /* Optional: prevent edge clipping on small screens */
+    box-sizing: border-box;    
+    display: flex;
+    align-items: baseline;   /* Vertically center */
+    justify-content: center; /* Horizontally center */
+  }
+
+  .quiz-container {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    max-width: 900px;
+    width: 100%;
+    max-height: 80vh;        /* Prevent overflow */
+    overflow: hidden;
+  }
+
+  .player-response {
+    text-align: right;
+    color: #0f62fe;
+    font-style: italic;
+    padding-right: 10px;
+    margin: 0.25rem 0;
+  }
+
+  .npc-panel {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .npc-panel img {
+    /* height: 100%; */
+    max-height: 150px;
+  }
+
+  .npc-name {
+    font-weight: bold;
+    margin-top: 0.5rem;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .dialogue-panel {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 2rem; /* Space for avatar */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    overflow: hidden;
+  }
+
+  .dialogue-box {
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-height: 100px;
+    margin-bottom: 1rem;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+
+  .choice-box {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+
+  .choice {
+    flex: 1;
+    padding: 0.8rem;
+    font-size: 15px;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .choice:hover {
+    background-color: #ddd;
+  }
+</style>

@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f2f4f8;
+  }
+  
+  #app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Top Bar */
+  .top-bar {
+    background: #0f62fe;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-weight: bold;
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
+
+.left-info,
+.right-resources {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.right-resources > div {
+  white-space: nowrap; /* keep each resource label and count on one line */
+}
+  
+  /* Grid Layout */
+  .main-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto;
+    overflow: hidden;
+  }
+  
+  /* Side Menu */
+  .side-menu {
+    background: #161616;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    width: 200px;
+    box-sizing: border-box;
+  }
+
+  .top-buttons,
+  .bottom-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .side-menu button {
+    margin: 5px 0;
+    padding: 10px;
+    background: #393939;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+    transition: background 0.3s;
+  }
+  
+  .side-menu button:hover {
+    background: #525252;
+  }
+  
+  /* Game Area */
+  .game-content {
+    background: #f4f4f4;
+    color: #161616;
+    overflow-y: auto;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #0f62fe;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+  }
+  
