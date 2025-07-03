@@ -1,3 +1,13 @@
+import { refreshResourcesUI } from './resources.js';
+
+const buildingToResource = {
+  electricPlant: 'electricity',
+  aiCenter: 'rawData', 
+  dataCenter: 'dataPacket',
+  defenceSystem: 'securityToken',
+  computeNode: 'processingUnit'
+}
+
 export class DialogueEngine {
   // TODO: change secton to section01 durng the usability test
   constructor(dialogueMap, dialogueTextEl, choiceBoxEl, building = 'dataCenter', section = 'section01') {
@@ -9,6 +19,8 @@ export class DialogueEngine {
     this.visited = [];
     this.incorrectCount = 0;
     this.quizFailed = false;
+    // electricity, rawData, dataPacket, securityToken, processingUnit
+    this.resources = JSON.parse(localStorage.getItem("resources"));
   }
 
   start() {
@@ -44,6 +56,13 @@ export class DialogueEngine {
     this.dialogueText.scrollTop = this.dialogueText.scrollHeight;
   }
 
+  updateResources(type, amount) {
+    this.resources[type] += amount;
+    localStorage.setItem('resources', JSON.stringify(this.resources));
+    // Optionally display it on screen or store it in localStorage
+    refreshResourcesUI(); 
+  }
+
   updateDialogue(stateKey, explanation = null, isCorrect = null) {
 
     // Handle previous status 
@@ -73,11 +92,13 @@ export class DialogueEngine {
       this.quizFailed = false;
     }
 
+    if (stateKey === 'village') {
+      this.updateResources(buildingToResource[this.building], 10);  // ✅ Give player 10 resources
+    }
+
     this.appendText(state.text);
 
-    console.log(state);
     if (state.warning) {
-      console.log(state.warning);
       this.appendWarning(state.warning);
     }
 
@@ -85,11 +106,9 @@ export class DialogueEngine {
     this.choiceBox.innerHTML = '';
 
     state.choices.forEach(choice => {
-
       const btn = document.createElement('button');
       btn.classList.add('choice');
       btn.textContent = choice.label;
-
       this.choiceBox.appendChild(btn);
 
       btn.addEventListener('click', () => {
@@ -114,14 +133,29 @@ export class DialogueEngine {
           // Start dialogue for the new section from 'starter'
           this.updateDialogue('starter');
         } else {
-            
+
+          if (choice.materialCost && this.resources.electricity < choice.materialCost) {
+            this.appendWarning(`You do not have enough electricity to perform this action. You need ${choice.materialCost} electricity.`);
+            // TODO: diary & arena need to be added and announced
+            // TODO: maybe can give player a button to go to diary or arena
+            this.appendText(["You can go to diary or arena to earn more electricity."]);
+
+            this.choiceBox.innerHTML = '';
+            const retryBtn = document.createElement('button');
+            retryBtn.classList.add('choice');
+            retryBtn.textContent = "Back to Village";
+            retryBtn.addEventListener('click', () => {
+              this.loadVillagePage();
+            });
+            this.choiceBox.appendChild(retryBtn);
+            return;
+          } else if (choice.materialCost) {
+            this.updateResources("electricity", -choice.materialCost);
+          }
+
           // Check answer correctness
           isCorrect = choice.isCorrect ?? null;
 
-          console.log(choice.isCorrect);
-          console.log(isCorrect);
-          console.log(isCorrect === false);
-          console.log(this.incorrectCount);
           if (isCorrect === false) {
             this.incorrectCount++;
           }
@@ -144,7 +178,6 @@ export class DialogueEngine {
           }
           this.updateDialogue(choice.next, explanation, isCorrect);
         }
-
       });
 
       this.dialogueText.scrollTop = this.dialogueText.scrollHeight;
@@ -170,7 +203,6 @@ export class DialogueEngine {
         this.visited.push(stateKey);
       }
       if (state.warning) {
-        console.log(state.warning);
         this.appendWarning(state.warning);
       }
     };
@@ -189,6 +221,26 @@ export class DialogueEngine {
         if (choice.next === 'backToVillage') {
           this.loadVillagePage();
         } else {
+
+          // check if need to spend electricity
+          if (choice.materialCost && this.resources.electricity < choice.materialCost) {
+            this.appendWarning(`You do not have enough electricity to perform this action. You need ${choice.materialCost} electricity.`);
+            // TODO: diary & arena need to be added and announced
+            // TODO: maybe can give player a button to go to diary or arena
+            this.appendText(["You can go to diary or arena to earn more electricity."]);
+            this.choiceBox.innerHTML = '';
+            const retryBtn = document.createElement('button');
+            retryBtn.classList.add('choice');
+            retryBtn.textContent = "Back to Village";
+            retryBtn.addEventListener('click', () => {
+              this.loadVillagePage();
+            });
+            this.choiceBox.appendChild(retryBtn);
+            return;
+          } else if (choice.materialCost){
+            this.updateResources("electricity", -choice.materialCost);
+          }
+
           this.updateDialogue(choice.next);
         }
         this.dialogueText.scrollTop = this.dialogueText.scrollHeight;

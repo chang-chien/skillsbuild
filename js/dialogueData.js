@@ -431,7 +431,7 @@ export const dialogueMapData = {
         ],
         warning: "If you answer wrong more than one question, you will need to retry the whole quiz.",
         choices: [
-          { label: "Sure, spend 10 electricity⚡", next: 'quiz02' },
+          { label: "Sure, spend 10 electricity⚡", next: 'quiz02', materialCost: 10 },
           { label: "I may need some time to prepare", next: 'backToVillage' }
         ]
       },
@@ -566,7 +566,7 @@ export const dialogueMapData = {
         ],
         warning: "If you answer wrong more than one question, you will need to retry the whole quiz.",
         choices: [
-          { label: "Sure, spend 10 electricity⚡", next: 'quiz02' },
+          { label: "Sure, spend 10 electricity⚡", next: 'quiz02', materialCost: 10  },
           { label: "I may need some time to prepare", next: 'backToVillage' }
         ]
       },
@@ -761,7 +761,7 @@ export const dialogueMapData = {
         ],
         warning: "If you answer wrong more than one question, you will need to retry the whole quiz.",
         choices: [
-          { label: "Sure, spend 10 electricity⚡", next: 'quiz06' },
+          { label: "Sure, spend 10 electricity⚡", next: 'quiz06', materialCost: 10  },
           { label: "I may need some time to prepare", next: 'backToVillage' }
         ]
       },

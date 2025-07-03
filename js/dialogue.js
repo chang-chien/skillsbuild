@@ -8,7 +8,7 @@ export function initDialogue() {
     const choiceBox = document.querySelector('.choice-box');
     const building = 'dataCenter';
   // TODO: change secton to section01 durng the usability test
-    const section = 'section01';
+    const section = 'section03';
 
     setTimeout(() => {
       console.log("wait 1 sec");
