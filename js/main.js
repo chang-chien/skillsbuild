@@ -1,5 +1,9 @@
+import { refreshResourcesUI } from './resources.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   loadVillage(); // Load village by default
+
+  refreshResourcesUI();
 
   const btnOverview = document.getElementById('btn-village');
   if (btnOverview) {
@@ -26,7 +30,7 @@ function attachBuildingListeners() {
       loadComponent(`./components/questions/${buildingId}.html`);
 
       // Dynamically import the module script (after DOM is updated)
-      import('./dialog.js').then(module => {
+      import('./dialogue.js').then(module => {
         if (module && typeof module.initDialogue === 'function') {
           module.initDialogue();
         }
@@ -40,7 +44,7 @@ function loadData() {
   loadComponent('./components/questions/data.html');
 
   // Dynamically import the module script (after DOM is updated)
-  import('./dialog.js').then(module => {  
+  import('./dialogue.js').then(module => {  
     if (module && typeof module.initDialogue === 'function') {
       module.initDialogue();
     }
@@ -62,3 +66,4 @@ function loadComponent(path, targetId = 'game-container', callback = null) {
       document.getElementById(targetId).innerHTML = `<p>Error loading content.</p>`;
     });
 }
+
