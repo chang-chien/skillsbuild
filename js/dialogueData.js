@@ -825,6 +825,228 @@ export const dialogueMapData = {
         ]
       },
     },
+    section06: {
+      title: 'Certification: Getting Started With Data',
+      sectionName: 'Data Center Section 06: Steps to Analyze Data ',
+      starter: {
+        text: [
+          "Tribal Leader, the time has come to uncover the secret rituals of the Data Shamans—ancient processes passed down to interpret the signs of the land and prepare your people for challenges ahead.",
+          "Four great steps await you: Collect, Clean, Analyze, and Visualize. Mastering them will turn raw reports into wisdom for the ages."
+        ],
+        choices: [
+          { label: "Tell me more about these sacred steps.", next: 'intro' },
+          { label: "No time for tales—test my instincts!", skipTo: 'quiz01' }
+        ]
+      },
+      intro: {
+        text: [
+          "Before you charge into battle, wise warriors prepare with knowledge.",
+          "The path of data analysis begins with a goal—just like planning a raid or securing trade routes. Ask yourself: What challenge are we facing? What answers do we seek?",
+          "With purpose in your heart, you’ll walk the fourfold path: **Collect** the signals, **Clean** the noise, **Analyze** the patterns, and **Visualize** the truth.",
+          "These steps will help you turn the chaos of information into powerful insight—guiding your every move as chief."
+        ],
+        choices: [
+          { label: "I’m ready—walk me through the ritual.", next: 'guide' },
+          { label: "Skip the talk—I’ll learn through combat.", skipTo: 'quiz01' }
+        ]
+      },
+      guide: {
+        text: [
+          "<br><b>1. Collect</b>: <i>Gathering the voices of the realm</i><br>Begin your journey by collecting data from all corners—villager scrolls, merchant logs, scout reports. The better the source, the clearer the picture.<br><br>" +
+          "<b>2. Clean</b>: <i>Removing the dust of confusion</i><br>Not all scrolls are accurate. Some may be damaged or duplicated. Remove errors, organize names, and ensure your data is as sharp as your blade.<br><br>" +
+          "<b>3. Analyze</b>: <i>Uncovering the hidden patterns</i><br>Study the trends—how harvests change, how enemies strike, when trades flourish. This step turns facts into strategy.<br><br>" +
+          "<b>4. Visualize</b>: <i>Sharing the truth through sacred symbols</i><br>Charts, maps, and diagrams—tools to communicate your findings to warriors and council elders alike. A good visualization can sway even the most stubborn chieftain.<br><br>" +
+          "These four steps form the sacred dance of data—each building upon the last. Perform them well, and even the stars will reveal their secrets to you."
+        ],
+        choices: [
+          { label: "I’m ready. Let me take the trial.", next: 'quiz01' }
+        ]
+      },
+      quiz01: {
+        text: [
+          "This is a special trial that include previous advanture.",
+          "<b>Spend 10 electricity⚡ to prove your readiness to face the battle ahead.</b>",
+        ],
+        warning: "If you answer wrong more than one question, you will need to retry the whole quiz.",
+        choices: [
+          { label: "Sure, spend 10 electricity⚡", next: 'quiz02', materialCost: 10  },
+          { label: "I may need some time to prepare", next: 'backToVillage' }
+        ]
+      },
+      quiz02: {
+        text: [
+          "In which step did Charles share that he is careful to follow the company guidelines when storing data for security purposes?"
+        ],
+        choices: [
+          { label: "Collect", next: 'quiz03', isCorrect: true },
+          { label: "Visualize", next: 'quiz03', isCorrect: false  },
+          { label: "Analyze", next: 'quiz03', isCorrect: false  },
+          { label: "Clean", next: 'quiz03', isCorrect: false }
+        ],
+        explanation: "In the <b>Collect</b> step to analyze data, it’s important to collect the right data from existing and new sources that is needed to answer the business question and securely store it according to proper business practices."
+      },
+      quiz03: {
+        text: [
+          "In which step did Charles share that he spends most of his time, nearly 80%? ",
+        ],
+        choices: [
+          { label: "Visualize", next: 'quiz04', isCorrect: false },
+          { label: "Clean", next: 'quiz04', isCorrect: true  },
+          { label: "Analyze", next: 'quiz04', isCorrect: false  },
+          { label: "Collect", next: 'quiz04', isCorrect: false }
+        ],
+        explanation: "You learned that in the <b>Clean</b> step, it takes a data analyst 70-80% of their time to detect and correct missing or inaccurate records from a data set."
+      },
+      quiz04: {
+        text: [
+          "In which step did Charles share he figures out the best way to depict his results in a team presentation?",
+        ],
+        choices: [
+          { label: "Visualize", next: 'quiz05', isCorrect: true },
+          { label: "Analyze", next: 'quiz05', isCorrect: false  },
+          { label: "Clean", next: 'quiz05', isCorrect: false  },
+          { label: "Collect", next: 'quiz05', isCorrect: false }
+        ],
+        explanation: "In the <b>Visualize step</b>, it’s time to make conclusions and pick the right data visualization to graphically show people the data results and insights to conclude actions to take."
+      },
+      quiz05: {
+        text: [
+          "In which step did Charles share that he gets excited to investigate and use the right analytical methods to find root causes?",
+        ],
+        choices: [
+          { label: "Clean", next: 'village', isCorrect: false },
+          { label: "Visualize", next: 'village', isCorrect: false  },
+          { label: "Analyze", next: 'village', isCorrect: true  },
+          { label: "Collect", next: 'village', isCorrect: false }
+        ],
+        explanation: "In the <b>Analyze</b> step, Charles shared that he uses problem-solving skills when he analyzes data to analyze trends and find root causes to answer the business question."
+      },
+      village: {
+        text: [
+          'Congratulations, you have completed the sixth section of the data center!',
+          'Here is your reward: 10 Data Packet 📊',
+          'You can now return to the village or continue to the next section.'],
+        choices: [
+          { label: 'Back to village', next: 'backToVillage' },
+          { label: 'Next section', next: 'nextSection' }
+        ]
+      },
+    },
+    section07: {
+      title: 'Certification: Getting Started With Data',
+      sectionName: 'Data Center Section 07: Visualize the Data ',
+      starter: {
+        text: [
+          "Welcome back, Tribal Leader. In our village, we have long struggled to interpret the signs from the Scrolls of Numbers. These scrolls hold the secrets to our survival—food production, battles won, harvest cycles, and even trade profits. But raw numbers are hard for our leaders to grasp.",
+          "Your task is to turn numbers into stories, crafting visualizations that influence key decisions. ",
+          "You must journey through the Temples of Visual Truth, master ancient charting techniques, and expose false prophets who use misleading visuals to sway decisions. Are you ready?"
+        ],
+        choices: [
+          { label: "Tell me more about the ancient charting techniques.", next: 'intro' },
+          { label: "I already command my story, let me prove it.", skipTo: 'quiz01' }
+        ]
+      },
+      intro: {
+        text: [
+          "Data storytelling is no mere trick—it is the art of combining data, visuals, and narrative. With these tools, even a mountain of numbers can speak with clarity.",
+          "Each part of the triad plays a role:<br><li>Data provides the facts.</li><li>Visualizations reveal patterns and trends.</li><li>Narrative explain why it matters.</li>",
+          "When they come together, they form a compelling data story that can drive action, inspire change, and prevent poor decisions."
+        ],
+        choices: [
+          { label: "Got it! What about the types of vsualization", next: 'guide' },
+          { label: "I’m ready for the challenge.", skipTo: 'quiz01' }
+        ]
+      },
+      guide: {
+        text: [
+          "Many charts exist—but use them wisely. Each serves a purpose depending on your goal<br><b>Step 1: Know the Charts of Power</b><li>Pie Chart – Shows relative proportion. Best for small item counts.</li><li>Bar Chart – Ranks items and compares them over time. Great for many categories.</li><li>Column Chart – Vertical bars for time, proportion, or frequency. Can show negative values.</li><li>Line Chart – Reveals trends over time. Ideal for continuous data.</li><li>Scatter Plot – Displays correlation and outliers between two variables.</li>",
+          "Not all charts are created equal. Even if the data is correct, the wrong chart can mislead or confuse.<br><b>Step 2: Select the Best Chart</b><ol>A 3D pie chart is used → Looks fancy, but hard to read.</ol><ol>Remove black background, enhance contrast to Better.</ol><ol>Flatten the pie chart → Less distraction.</ol><ol>Switch to a bar chart → Clear comparison emerges.</ol><ol>Emphasize the top item (e.g., darker shade for 'Latte') → Visual impact achieved!</ol>",
+          "Not every chart is what it seems. Some are used to mislead, whether by accident or intent.<br><b>Step 3: Beware of Misleading Charts</b><br>Here are some dark techniques to guard against:<li>Truncated axes: Makes small differences seem huge.</li><li>Overuse of 3D effects: Adds confusion, not clarity.</li><li>Cherry-picked timeframes: Hides the full story.</li><li>Too many pie slices: Drowns insight in chaos.</li><li>No labels or poor scaling: Creates ambiguity.</li>"
+        ],
+        choices: [
+          { label: "I understand. Let me face the trial.", next: 'quiz01' }
+        ]
+      },
+      quiz01: {
+        text: [
+          "This is a special trial that include previous advanture.",
+          "<b>Spend 10 electricity⚡ to prove your readiness to face the battle ahead.</b>",
+        ],
+        warning: "If you answer wrong more than one question, you will need to retry the whole quiz.",
+        choices: [
+          { label: "Sure, spend 10 electricity⚡", next: 'quiz02', materialCost: 10  },
+          { label: "I may need some time to prepare", next: 'backToVillage' }
+        ]
+      },
+      quiz02: {
+        text: [
+          "<b>Is this the purpose of a data visualization?</b>",
+          "Organize data in a usable format, such as a spreadsheet, for people to easily access."
+        ],
+        choices: [
+          { label: "Yes", next: 'quiz03', isCorrect: false },
+          { label: "No", next: 'quiz03', isCorrect: true }
+        ],
+        explanation: "Data analysts use visualizations like charts, graphs, and maps for two reasons: to explore and interpret data during analysis to identify patterns or trends; and to communicate results and help people understand the insights to make decisions."
+      },
+      quiz03: {
+        text: [
+          "<b>Is this the purpose of a data visualization?</b>",
+          "Explore and interpret data during analysis to identify patterns or trends."
+        ],
+        choices: [
+          { label: "Yes", next: 'quiz04', isCorrect: true },
+          { label: "No", next: 'quiz04', isCorrect: false }
+        ],
+        explanation: "Data analysts use visualizations like charts, graphs, and maps for two reasons: to explore and interpret data during analysis to identify patterns or trends; and to communicate results and help people understand the insights to make decisions."
+      },
+      quiz04: {
+        text: [
+          "<b>Is this the purpose of a data visualization?</b>",
+          "Communicate results and help people understand the insights to make decisions."
+        ],
+        choices: [
+          { label: "Yes", next: 'quiz05', isCorrect: true },
+          { label: "No", next: 'quiz05', isCorrect: false }
+        ],
+        explanation: "Data analysts use visualizations like charts, graphs, and maps for two reasons: to explore and interpret data during analysis to identify patterns or trends; and to communicate results and help people understand the insights to make decisions."
+      },
+      quiz05: {
+        text: [
+          "Which type of visualization is best-suited for ranking a large number of categories, showing correlation, and using for before-after analysis?",
+        ],
+        choices: [
+          { label: "Line chart", next: 'quiz06', isCorrect: false },
+          { label: "Pie chart", next: 'quiz06', isCorrect: false  },
+          { label: "Scatter plot chart", next: 'quiz06', isCorrect: false  },
+          { label: "Bar chart", next: 'quiz06', isCorrect: true }
+        ],
+        explanation: "Bar charts are useful for ranking a large number of categories, showing correlation, and using for before-after analysis. Use bar charts for comparison and ranking. Bar charts also help illustrate change over time."
+      },
+      quiz06: {
+        text: [
+          "Which of the following statements about data visualizations is correct?",
+        ],
+        choices: [
+          { label: "The audience should be confused when they first see a visualization.", next: 'village', isCorrect: false },
+          { label: "Data analysts typically use one of four types of visualizations. ", next: 'village', isCorrect: false  },
+          { label: "The goal is to have a visual that is effective, attractive, and impactive. ", next: 'village', isCorrect: true  },
+          { label: "Data visualizations turn narratives into numbers.", next: 'village', isCorrect: false }
+        ],
+        explanation: "The goal is to have a visual that’s effective, attractive, and impactive."
+      },
+      village: {
+        text: [
+          "Congratulations, you have completed the seventh section of the data center!",
+          "Here is your reward: 10 Data Packet 📊",
+          "You've leveled up through many battles. Head to the Academy now — it's time to take your Big Exam and prove your mastery!"
+        ],
+        choices: [
+          { label: 'Back to village', next: 'backToVillage' },
+          { label: 'Go to academic', next: 'goToAcademic' }
+        ]
+      },
+    },
     sectionXX: {
       title: 'Certification: Getting Started With Data',
       sectionName: 'Data Center Section 01: type of data',

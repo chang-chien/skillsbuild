@@ -4,7 +4,7 @@ localStorage.setItem("resources", JSON.stringify({
   dataPacket: 0,
   securityToken: 0,
   processingUnit: 0,
-  electricity: 0
+  electricity: 10
 }));
 
 export function refreshResourcesUI() {
