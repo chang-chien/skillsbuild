@@ -1,32 +1,37 @@
 <section class="village-screen">
-  <div class="building wall-img" data-title="Wall" data-type="info">
-    <img src="../assets/images/building/wallL1.png" alt="Wall Level 1">
+  <!-- <div class="building wall-img" data-title="Wall" data-type="info">
+    <img src="../assets/images/buildings/wallL1.png" alt="Wall Level 1">
     <span class="label">Wall: Level 1</span>
-  </div>
+  </div> -->
 
-  <div class="building ai-img" data-title="AI Center" data-type="info">
-    <img src="../assets/images/building/aiL1.png" alt="AI Center Level 1">
+  <div class="building ai-img" id="ai" data-title="AI Center" data-type="quiz">
+    <img src="../assets/images/buildings/aiL1.png" alt="AI Center Level 1">
     <span class="label">AI Center: Level 1</span>
   </div>
 
   <div class="building electric-img" data-title="Electric Plant" data-type="info">
-    <img src="../assets/images/building/electricL1.png" alt="Electric Plant Level 1">
+    <img src="../assets/images/buildings/electricL1.png" alt="Electric Plant Level 1">
     <span class="label">Electric Plant: Level 1<br>⚡ 100 / hour</span>
   </div>
 
   <div class="building defense-img" id="defense" data-title="Defense System" data-type="quiz">
-    <img src="../assets/images/building/defenseL1.png" alt="Defense System Level 1">
+    <img src="../assets/images/buildings/defenseL1.png" alt="Defense System Level 1">
     <span class="label">Defense System: Level 1<br>🔐 100 / hour</span>
   </div>
 
   <div class="building compute-img" id="compute" data-title="Compute Node" data-type="quiz">
-    <img src="../assets/images/building/computeL1.png" alt="Compute Node Level 1">
+    <img src="../assets/images/buildings/computeL1.png" alt="Compute Node Level 1">
     <span class="label">Compute Node: Level 1<br>📊 100 / hour</span>
   </div>
 
   <div class="building data-img" id="data" data-title="Data Center" data-type="quiz">
-    <img src="../assets/images/building/dataL1.png" alt="Data Center Level 1">
+    <img src="../assets/images/buildings/dataL1.png" alt="Data Center Level 1">
     <span class="label">Data Center: Level 1<br>💾 100 / hour</span>
+  </div>
+
+  <div class="building academic-img" id="academic" data-title="Academic" data-type="info">
+    <img src="../assets/images/buildings/academic.png" alt="Academic Level 1">
+    <span class="label">Academic: Level 1</span>
   </div>
 </section>
 
@@ -75,9 +80,10 @@
 
   /* Building-specific positions */
   .wall-img   { top: 30%; right: 30%; width: 500px; z-index: 10; }
-  .ai-img     { top: 30%; right: 43%; width: 150px; z-index: 10; }
-  .electric-img { top: 0px; right: 10px; width: 200px; z-index: 10; }
+  .ai-img     { top: 10px; right: 40px; width: 120px; z-index: 10; }
+  .electric-img { top: 0px; left: -40px; width: 250px; z-index: 10; }
   .defense-img { bottom: 20px; left: 40px; width: 150px; z-index: 10; }
-  .compute-img { top: 10px; left: 40px; width: 150px; z-index: 10; }
-  .data-img    { bottom: 25px; right: 60px; width: 150px; z-index: 10; }
+  .compute-img  { bottom: 25px; right: 80px; width: 150px; z-index: 10; }
+  .data-img    { top: 200px; left: 180px; width: 150px; z-index: 10; }
+  .academic-img    { top: 8%; right: 26%; width: 200px; z-index: 10; }
 </style>
