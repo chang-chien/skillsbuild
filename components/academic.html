@@ -1,0 +1,89 @@
+<section class="quiz-section">
+  <div class="quiz-container button-grid">
+    <!-- Each button wraps its text in a <span> for correct z-index layering -->
+    <button class="upgrade-button compute"><span>Upgrade<br> Compute Node</span></button>
+    <button class="upgrade-button data"><span>Upgrade<br> Data Center</span></button>
+    <button class="upgrade-button defense"><span>Upgrade<br> Defense System</span></button>
+    <button class="upgrade-button ai"><span>Upgrade<br> AI Center</span></button>
+  </div>
+</section>
+
+<style>
+  .quiz-section {
+    position: relative;
+    height: 100%;
+    background-image: url('../assets/images/villageBG.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    box-sizing: border-box;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .quiz-container.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    width: 70%;
+    height: 70%;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+.upgrade-button {
+  position: relative;
+  padding: 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: 20px solid transparent;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.3s;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 5px black;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Text stays above overlay */
+.upgrade-button span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hover effect */
+.upgrade-button:hover {
+  transform: scale(1.1);
+}
+
+.upgrade-button.disabled {
+  filter: brightness(0.5);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+  /* Specific building backgrounds */
+  .upgrade-button.compute {
+    background-image: url('../assets/images/buildings/computeL1.png');
+  }
+
+  .upgrade-button.data {
+    background-image: url('../assets/images/buildings/dataL1.png');
+  }
+
+  .upgrade-button.defense {
+    background-image: url('../assets/images/buildings/defenseL1.png');
+  }
+
+  .upgrade-button.ai {
+    background-image: url('../assets/images/buildings/aiL1.png');
+  }
+</style>

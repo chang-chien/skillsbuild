@@ -10,7 +10,7 @@ const buildingToResource = {
 
 export class DialogueEngine {
   // TODO: change secton to section01 durng the usability test
-  constructor(dialogueMap, dialogueTextEl, choiceBoxEl, building = 'dataCenter', section = 'section07') {
+  constructor(dialogueMap, dialogueTextEl, choiceBoxEl, building = 'dataCenter', section = 'section06') {
     this.dialogueMap = dialogueMap;
     this.dialogueText = dialogueTextEl;
     this.choiceBox = choiceBoxEl;
