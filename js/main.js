@@ -93,12 +93,12 @@ function loadAcademic() {
 function loadArena() {
   loadComponent('./components/arena.html');
 
-  // // Dynamically import the module script (after DOM is updated)
-  // import('./upgrade.js').then(module => {  
-  //   if (module && typeof module.initUpgradeButtons === 'function') {
-  //     module.initUpgradeButtons();
-  //   }
-  // });
+  // Dynamically import the module script (after DOM is updated)
+  import('./contest.js').then(module => {  
+    if (module && typeof module.initContestButtons === 'function') {
+      module.initContestButtons();
+    }
+  });
 }
 
 // Function to load external HTML into target container
