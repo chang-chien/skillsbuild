@@ -1,0 +1,157 @@
+<section class="quiz-section">
+  <div class="insight-container">
+    <div class="insight-header">
+      <span class="icon">🔍</span>
+      <span>Insight Ledger</span>
+    </div>
+    <div class="insight-grid">
+      <!-- Single Entry -->
+      <div class="insight">
+          <span class="question" id="ai_module01_part02">How would you describe what AI does?</span>
+          <span class="reward">10 ⚡</span>
+          <button class="insight-btn">Write something</button>
+      </div>
+      <div class="insight">
+          <span class="question" id="ai_module04_part03">If ML offers only probabilities, who makes the final decision?</span>
+          <span class="reward">10 ⚡</span>
+          <button class="insight-btn">Write something</button>
+      </div>
+      <div class="insight">
+          <span class="question" id="ai_module06_part02_q1">How have you experienced Narrow AI in your life?</span>
+          <span class="reward">10 ⚡</span>
+          <button class="insight-btn">Write something</button>
+      </div>
+      <div class="insight">
+          <span class="question" id="ai_module06_part02_q2">How have you experienced Broad AI in your life?</span>
+          <span class="reward">10 ⚡</span>
+          <button class="insight-btn">Write something</button>
+      </div>
+      <div class="insight">
+          <span class="question" id="ai_module06_part02_q3">How do you expect to experience General AI in your life?</span>
+          <span class="reward">10 ⚡</span>
+          <button class="insight-btn">Write something</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .quiz-section {
+    position: relative;
+    height: 100%;
+    background-image: url('../assets/images/villageBG.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    gap: 2rem; /* Space between cards */
+    box-sizing: border-box;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .insight-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 70%;
+    max-width: 700px;
+    height: 80%; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Title Bar */
+  .insight-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 0.5rem;
+    justify-content: center;
+    height: min-content;
+    font-size: 1rem;
+    color: white;
+  }
+
+  .insight-header .icon {
+    font-size: 1.25rem;
+  }
+
+  .insight-grid {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    height: 100%;
+    gap: 1rem;
+  }
+
+  .insight {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .question {
+    flex-grow: 1; /* Allow name to take available space */
+    text-shadow: 2px 2px 20px black;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .reward {
+    font-size: 0.875rem; /* Smaller font size */
+    color: black; 
+    width: 40px; /* Fixed width for reward */
+    text-shadow: 1px 1px 15px black;
+  }
+
+  .info {
+    color: black;
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px 20px black;
+    font-weight: 500;
+  }
+
+  .insight-btn {
+    background: #393939;
+    border: 2px solid #888;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-size: 0.75rem;
+    width: 8 rem;
+    min-width: fit-content;
+  }
+
+  .insight-btn.disabled {
+    text-shadow: none;
+    filter: brightness(0.7);
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+  }
+
+  .insight-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    background: #525252;
+  }
+</style>

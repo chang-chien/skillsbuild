@@ -1,0 +1,162 @@
+<section class="quiz-section">
+  <div class="news-container">
+    <div class="news-header">
+      <span class="icon">📰</span>
+      <span>News</span>
+    </div>
+    <div class="news-grid">
+      <!-- Single Entry -->
+      <div class="news">
+          <span class="question" id="ai_module01_part06">Human 2.0 Is Coming Faster Than You Think. Will You Evolve With The Times?</span>
+          <span class="reward">10 📄</span>
+          <button class="news-btn">Know more</button>
+      </div>
+      <div class="news">
+          <span class="question" id="ai_module03_part02">The Future of Data Revolution will be Unstructured Data</span>
+          <span class="reward">10 📄</span>
+          <button class="news-btn">Know more</button>
+      </div>
+      <div class="news">
+          <span class="question" id="ai_module07_knowmore01">What is artificial intelligence (AI)?</span>
+          <span class="reward">10 📄</span>
+          <button class="news-btn">Know more</button>
+      </div>
+      <div class="news">
+          <span class="question" id="ai_module07_knowmore02">Distinguishing between Narrow AI, General AI and Super AI</span>
+          <span class="reward">10 📄</span>
+          <button class="news-btn">Know more</button>
+      </div>
+      <div class="news">
+          <span class="question" id="ai_module07_knowmore03">What is generative AI?</span>
+          <span class="reward">10 📄</span>
+          <button class="news-btn">Know more</button>
+      </div>
+      <div class="news">
+          <span class="question" id="ai_module07_knowmore04">Can AI help Climate Change?</span>
+          <span class="reward">10 📄</span>
+          <button class="news-btn">Know more</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .quiz-section {
+    position: relative;
+    height: 100%;
+    background-image: url('../assets/images/villageBG.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    gap: 2rem; /* Space between cards */
+    box-sizing: border-box;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .news-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 70%;
+    max-width: 800px;
+    height: 80%; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Title Bar */
+  .news-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 0.5rem;
+    justify-content: center;
+    height: min-content;
+    font-size: 1rem;
+    color: white;
+  }
+
+  .news-header .icon {
+    font-size: 1.25rem;
+  }
+
+  .news-grid {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    height: 100%;
+    gap: 1rem;
+  }
+
+  .news {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .question {
+    flex-grow: 1; /* Allow name to take available space */
+    text-shadow: 2px 2px 20px black;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .reward {
+    font-size: 0.875rem; /* Smaller font size */
+    color: black; 
+    width: 40px; /* Fixed width for reward */
+    text-shadow: 1px 1px 15px black;
+  }
+
+  .info {
+    color: black;
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px 20px black;
+    font-weight: 500;
+  }
+
+  .news-btn {
+    background: #393939;
+    border: 2px solid #888;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-size: 0.75rem;
+    width: 8 rem;
+    min-width: fit-content;
+  }
+
+  .news-btn.disabled {
+    text-shadow: none;
+    filter: brightness(0.7);
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+  }
+
+  .news-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    background: #525252;
+  }
+</style>
