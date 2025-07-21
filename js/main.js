@@ -27,7 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const btnQuests = document.getElementById('btn-quests');
   if (btnQuests) {
-    btnQuests.addEventListener('click', loadQuest);
+    btnQuests.addEventListener('click', () => {
+      loadComponent('./components/quest.html', 'game-container');
+    });
   }
 
   const btnNews = document.getElementById('btn-news');
@@ -39,16 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnInsight) {
     btnInsight.addEventListener('click', loadInsight);
   }
+
+  const btnLeaderboard = document.getElementById('btn-leaderboard');
+  if (btnLeaderboard) { 
+    btnLeaderboard.addEventListener('click', () => {
+      loadComponent('./components/leaderboard.html', 'game-container');
+    });
+  }
 });
 
 // 🧠 Extract village logic into reusable function
 function loadVillage() {
   loadComponent('./components/village.html', 'game-container', attachBuildingListeners);
-}
-
-function loadQuest() {
-  console.log('Loading task component...');
-  loadComponent('./components/quest.html', 'game-container');
 }
 
 function loadNews() {
