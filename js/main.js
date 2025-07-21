@@ -24,11 +24,21 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnArena) {
     btnArena.addEventListener('click', loadArena);
   }
+
+  const btnTasks = document.getElementById('btn-quests');
+  if (btnTasks) {
+    btnTasks.addEventListener('click', loadTask);
+  }
 });
 
 // 🧠 Extract village logic into reusable function
 function loadVillage() {
   loadComponent('./components/village.html', 'game-container', attachBuildingListeners);
+}
+
+function loadTask() {
+  console.log('Loading task component...');
+  loadComponent('./components/quest.html', 'game-container');
 }
 
 // 🔁 Called after village.html loads
