@@ -1,6 +1,6 @@
 // Initialize resources
 localStorage.setItem("resources", JSON.stringify({
-  rawData: 0,
+  rawData: 10,
   dataPacket: 50,
   securityToken: 0,
   processingUnit: 0,

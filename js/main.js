@@ -15,9 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
     btnDataQuiz.addEventListener('click', loadData);
   }
 
-    const btnAcademicQuiz = document.getElementById('btn-academic-quiz');
+  const btnAcademicQuiz = document.getElementById('btn-academic-quiz');
   if (btnAcademicQuiz) {
     btnAcademicQuiz.addEventListener('click', loadAcademic);
+  }
+
+  const btnArena = document.getElementById('btn-arena-quiz');
+  if (btnArena) {
+    btnArena.addEventListener('click', loadArena);
   }
 });
 
@@ -45,6 +50,7 @@ function attachBuildingListeners() {
 
   const infoBuildings = document.querySelectorAll('.building[data-type="info"]');
   infoBuildings.forEach(building => {
+    console.log(`Attaching click listener to info building: ${building.id}`);
     building.addEventListener('click', () => {
       const buildingId = building.id; // e.g., "compute", "data", etc.
       loadComponent(`./components/${buildingId}.html`);
@@ -79,6 +85,18 @@ function loadAcademic() {
   import('./upgrade.js').then(module => {  
     if (module && typeof module.initUpgradeButtons === 'function') {
       module.initUpgradeButtons();
+    }
+  });
+}
+
+// ⚙️ Load the academy quiz scene
+function loadArena() {
+  loadComponent('./components/arena.html');
+
+  // Dynamically import the module script (after DOM is updated)
+  import('./contest.js').then(module => {  
+    if (module && typeof module.initContestButtons === 'function') {
+      module.initContestButtons();
     }
   });
 }
