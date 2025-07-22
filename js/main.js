@@ -24,12 +24,47 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnArena) {
     btnArena.addEventListener('click', loadArena);
   }
+
+  const btnQuests = document.getElementById('btn-quests');
+  if (btnQuests) {
+    btnQuests.addEventListener('click', () => {
+      loadComponent('./components/quest.html', 'game-container');
+    });
+  }
+
+  const btnNews = document.getElementById('btn-news');
+  if (btnNews) {
+    btnNews.addEventListener('click', loadNews);
+  }
+
+  const btnInsight = document.getElementById('btn-insight');
+  if (btnInsight) {
+    btnInsight.addEventListener('click', loadInsight);
+  }
+
+  const btnLeaderboard = document.getElementById('btn-leaderboard');
+  if (btnLeaderboard) { 
+    btnLeaderboard.addEventListener('click', () => {
+      loadComponent('./components/leaderboard.html', 'game-container');
+    });
+  }
 });
 
 // 🧠 Extract village logic into reusable function
 function loadVillage() {
   loadComponent('./components/village.html', 'game-container', attachBuildingListeners);
 }
+
+function loadNews() {
+  console.log('Loading news component...');
+  loadComponent('./components/news.html', 'game-container');
+}
+
+function loadInsight() {
+  console.log('Loading insght component...');
+  loadComponent('./components/insight.html', 'game-container');
+}
+
 
 // 🔁 Called after village.html loads
 function attachBuildingListeners() {
