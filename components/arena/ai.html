@@ -42,9 +42,10 @@
   .quiz-section {
     position: relative;
     height: 100%; /* Full viewport height for vertical centering */
-    background-image: url('./assets/images/villageBG.png'); 
-    background-size: cover;
+    aspect-ratio: 16/9;
+    background-size: auto 100%;
     background-position: center;
+    background-image: url('./assets/images/villageBG.png'); 
     background-repeat: no-repeat;
     padding: 2rem; /* Optional: prevent edge clipping on small screens */
     box-sizing: border-box;    
@@ -53,7 +54,17 @@
     justify-content: center; /* Horizontally center */
   }
 
+  .quiz-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.6); /* 調這裡的透明度淡化 */
+  z-index: 1;
+  pointer-events: none;
+}
+
   .quiz-container {
+  z-index: 10;
     width: 60%;
     height: 80%;
     background: rgba(0, 0, 0, 0.5);
