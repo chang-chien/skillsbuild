@@ -1106,5 +1106,361 @@ export const dialogueMapData = {
         ]
       },
     },
+    },
+  AiCenter: {
+    section01: {
+      title: 'Getting Started with Artificial Intelligence',
+      sectionName: 'AI Center Section 01: What is AI?',
+      starter: {
+        text: [
+          'Tribal Leader, strange knowledge has returned from the stars—whispers of “machine minds” that do not think, but calculate with great speed.',
+          'Before we unlock these powers to guide our tribe, you must understand what they are… and what they are not.'
+        ],
+        choices: [
+          { label: 'I’m listening. Tell me more.', next: 'intro' },
+          { label: 'Skip the tale. I want the challenge.', skipTo: 'quiz01' }
+        ]
+      },
+      intro: {
+        text: [
+          'The ancients called it “Artificial Intelligence”—not a spirit, not a god, but a tool built to learn patterns and make predictions.',
+          'These machines do not dream nor decide. They simply compute—faster than any sage or scout, but without judgment or soul.'
+        ],
+        choices: [
+          { label: 'And what of Augmented Intelligence?', next: 'guide' },
+          { label: 'I understand. Let me prove it.', skipTo: 'quiz01' }
+        ]
+      },
+      guide: {
+        text: [
+          'Augmented Intelligence is different—it strengthens the minds of our scribes and leaders, helping them read a thousand scrolls in the time it takes to blink.',
+          'Where AI may act on its own, Augmented Intelligence is a loyal ally—it empowers, but never replaces the wisdom of the living.',
+          'Remember this: machines serve the tribe, not rule it.'
+        ],
+        choices: [
+          { label: 'I see clearly now. Begin the test.', next: 'quiz01' }
+        ]
+      },
+      quiz01: {
+        text: [
+          'The Seer asks: What is the core magic of the machine minds (AI)?',
+          'Answer wisely—the elders are watching.'
+        ],
+        choices: [
+          { label: 'Mimic human thinking to make decisions.', next: 'quiz01_retry' },
+          { label: 'Learn patterns and predict from vast data.', next: 'quiz02' },
+          { label: 'Replace humans in all intelligent tasks.', next: 'quiz01_retry' },
+          { label: 'Give emotional support and invent new ideas.', next: 'quiz01_retry' }
+        ]
+      },
+      quiz01_retry: {
+        text: [
+          'Not quite. The spirits say the true strength of AI is not in replacing minds, but in recognizing patterns.',
+          'Try again: What is the core function of AI?'
+        ],
+        choices: [
+          { label: 'Mimic human thinking to make decisions.', next: 'quiz01_retry' },
+          { label: 'Learn patterns and predict from vast data.', next: 'quiz02' },
+          { label: 'Replace humans in all intelligent tasks.', next: 'quiz01_retry' },
+          { label: 'Give emotional support and invent new ideas.', next: 'quiz01_retry' }
+        ]
+      },
+      quiz02: {
+        text: [
+          'Next question from the Council: What sets machine minds (AI) apart from the path of Augmented Wisdom?',
+          'Choose the truest path.'
+        ],
+        choices: [
+          { label: 'AI is for daily tasks, Augmented is for business.', next: 'quiz02_retry' },
+          { label: 'AI replaces, Augmented empowers human decisions.', next: 'quiz03' },
+          { label: 'AI needs humans, Augmented learns alone.', next: 'quiz02_retry' },
+          { label: 'AI handles stories, Augmented handles numbers.', next: 'quiz02_retry' }
+        ]
+      },
+      quiz02_retry: {
+        text: [
+          'Not the right path. AI aims to act alone, while Augmented Wisdom is a guiding torch that supports human choice.',
+          'Try again: What separates AI from Augmented Intelligence?'
+        ],
+        choices: [
+          { label: 'AI is for daily tasks, Augmented is for business.', next: 'quiz02_retry' },
+          { label: 'AI replaces, Augmented empowers human decisions.', next: 'quiz03' },
+          { label: 'AI needs humans, Augmented learns alone.', next: 'quiz02_retry' },
+          { label: 'AI handles stories, Augmented handles numbers.', next: 'quiz02_retry' }
+        ]
+      },
+      quiz03: {
+        text: [
+          'Final riddle of the Ancients: Where do humans still hold strong over the machines?',
+          'A question of spirit and mind.'
+        ],
+        choices: [
+          { label: 'Faster at repeating data tasks.', next: 'quiz03_retry' },
+          { label: 'More precise in repetitive duties.', next: 'quiz03_retry' },
+          { label: 'Creative, emotional, and good at big-picture thinking.', next: 'village' },
+          { label: 'Never tire, endlessly process data.', next: 'quiz03_retry' }
+        ]
+      },
+      quiz03_retry: {
+        text: [
+          'Even the cleverest machines lack emotion and vision.',
+          'Try again: Where do humans shine most?'
+        ],
+        choices: [
+          { label: 'Faster at repeating data tasks.', next: 'quiz03_retry' },
+          { label: 'More precise in repetitive duties.', next: 'quiz03_retry' },
+          { label: 'Creative, emotional, and good at big-picture thinking.', next: 'village' },
+          { label: 'Never tire, endlessly process data.', next: 'quiz03_retry' }
+        ]
+      },
+      village: {
+        text: [
+          'Well done, Tribal Leader. You’ve passed the Trial of the Mind!',
+          'Your insight earns the tribe 10 Raw Data 📄.',
+          'Will you return to the village or seek the next ancient secret?'
+        ],
+        choices: [
+          { label: 'Return to village', next: 'backToVillage' },
+          { label: 'Continue the journey', next: 'nextSection' }
+        ]
+      },
+    },
+    section02: {
+      title: 'Getting Started with Artificial Intelligence',
+      sectionName: 'AI Center Section 01: What is AI?',
+      starter: {
+        text: [
+          'Leader, strange powers now stir in our lands. The ancients called it “Artificial Intelligence.”',
+          'It does not think, it calculates. It learns not by magic, but through endless trial and pattern.',
+          'This learning splits into two paths: analysis and foresight.',
+          'Analysis: The machine reads vast scrolls, sorting and naming what it sees.',
+          'Foresight: From past patterns, it predicts what may come.',
+          'The more scrolls it reads, the better it learns. This is called Machine Training.'
+        ],
+        choices: [
+          { label: 'And what of deep learning?', next: 'intro' },
+          { label: 'Skip the lore. Show me the challenge.', skipTo: 'quiz01' }
+        ]
+      },
+      intro: {
+        text: [
+          'Deep wisdom skips scroll-making. The magic sees patterns on its own.',
+          'Feed it pictures of fruits, and it learns without you pointing out color or shape.',
+          'It teaches itself through many layers—like passing messages across village scouts.'
+        ],
+        choices: [
+          { label: 'Sounds powerful. Any real use?', next: 'guide' },
+          { label: 'Understood. Let’s test it.', skipTo: 'quiz01' }
+        ]
+      },
+      guide: {
+        text: [
+          'Spells of correction: It predicts your next word from memory of phrases.',
+          'Talking stones: Bots understand broken tongue and still reply right.',
+          'Eyes of the machine: It sees signs, spots sickness, and guides carts.',
+          'Thieves beware: It sees patterns in coin trades and warns of fraud.',
+          'The wisdom now guides, guards, and grows our tribe.'
+        ],
+        choices: [
+          { label: 'Let me face the trial.', next: 'quiz01' }
+        ]
+      },
+      quiz01: {
+        text: [
+          'The Spirits whisper a test: What do these magical machines truly do?',
+          'Choose wisely, Tribal Leader.'
+        ],
+        choices: [
+          { label: 'They think and plot like our sages.', next: 'quiz01_retry' },
+          { label: 'They read scrolls and foresee what may happen.', next: 'quiz02' },
+          { label: 'They replace all council decisions.', next: 'quiz01_retry' },
+          { label: 'They will conquer all tribes.', next: 'quiz01_retry' }
+        ]
+      },
+      quiz01_retry: {
+        text: [
+          'Nay, their power lies not in dreams or dominion.',
+          'Try again: What do they truly do?'
+        ],
+        choices: [
+          { label: 'They think and plot like our sages.', next: 'quiz01_retry' },
+          { label: 'They read scrolls and foresee what may happen.', next: 'quiz02' },
+          { label: 'They replace all council decisions.', next: 'quiz01_retry' },
+          { label: 'They will conquer all tribes.', next: 'quiz01_retry' }
+        ]
+      },
+      quiz02: {
+        text: [
+          'Next challenge: In sorting fruits from the harvest, what makes deep wisdom different?'
+        ],
+        choices: [
+          { label: 'It needs elders to describe every new fruit.', next: 'quiz02_retry' },
+          { label: 'It sees patterns without being told what to look for.', next: 'quiz03' },
+          { label: 'It follows only fixed village rules.', next: 'quiz02_retry' },
+          { label: 'It learns from just one try.', next: 'quiz02_retry' }
+        ]
+      },
+      quiz02_retry: {
+        text: [
+          'Not quite. True deep wisdom learns without being told.',
+          'Try again, brave one.'
+        ],
+        choices: [
+          { label: 'It needs elders to describe every new fruit.', next: 'quiz05_retry' },
+          { label: 'It sees patterns without being told what to look for.', next: 'quiz03' },
+          { label: 'It follows only fixed village rules.', next: 'quiz05_retry' },
+          { label: 'It learns from just one try.', next: 'quiz05_retry' }
+        ]
+      },
+      quiz03: {
+        text: [
+          'Final trial: What shows a machine’s power to predict from the scrolls?'
+        ],
+        choices: [
+          { label: 'It builds new tools from thin air.', next: 'quiz03_retry' },
+          { label: 'It follows only ancient rules to sort scrolls.', next: 'quiz03_retry' },
+          { label: 'It corrects your words before you finish writing.', next: 'village' },
+          { label: 'It heals without the healer’s guidance.', next: 'quiz03_retry' }
+        ]
+      },
+      quiz03_retry: {
+        text: [
+          'Machines may be clever, but they don’t replace healers or forge tools alone.',
+          'Try again: What shows their predictive magic?'
+        ],
+        choices: [
+          { label: 'It builds new tools from thin air.', next: 'quiz03_retry' },
+          { label: 'It follows only ancient rules to sort scrolls.', next: 'quiz03_retry' },
+          { label: 'It corrects your words before you finish writing.', next: 'village' },
+          { label: 'It heals without the healer’s guidance.', next: 'quiz03_retry' }
+        ]
+      },
+      village: {
+        text: [
+          'Well done, Tribal Leader. You’ve passed the Trials of the Machine!',
+          'Your insight earns the tribe 10 Raw Data 📄.',
+          'Will you return to the firepit or seek more ancient secrets?'
+        ],
+        choices: [
+          { label: 'Return to village', next: 'backToVillage' },
+          { label: 'Continue the journey', next: 'nextSection' }
+        ]
+      }
+    },
+    section03: {
+      title: 'Getting Started with Artificial Intelligence',
+      sectionName: 'AI Center Section 01: What is AI?',
+      starter: {
+        text: [
+          'Tribal Leader, beyond data lies a deeper force—artificial intelligence.',
+          'The Ancients spoke of three levels, each more powerful than the last. Do you wish to learn?'
+        ],
+        choices: [
+          { label: 'Yes, reveal their secrets.', next: 'intro' },
+          { label: 'No need, just test me.', skipTo: 'quiz01' }
+        ]
+      },
+      intro: {
+        text: [
+          'First, there is Narrow AI.',
+          'It handles one task only—like predicting trade routes or setting daily tasks. Tools like Siri or self-driving carts use it.',
+          'Next comes Broad AI.',
+          'It can handle multiple related tasks. Tribes use it to forecast storms or track disease.',
+          'But it must be trained with tribal knowledge and patterns.'
+        ],
+        choices: [
+          { label: 'Tell me more.', next: 'guide' },
+          { label: 'I’ve heard enough. Move on.', skipTo: 'quiz01' }
+        ]
+      },
+      guide: {
+        text: [
+          'Last is General AI—the dream of minds like ours.',
+          'It would think, invent, and feel like humans. But... it does not yet exist.',
+          'It is a vision of the far future. For now, we train with what is real.'
+        ],
+        choices: [
+          { label: 'Understood. Let the trial begin.', next: 'quiz01' }
+        ]
+      },
+      quiz01: {
+        text: [
+          'Which AI level masters just one single, focused task?'
+        ],
+        choices: [
+          { label: 'General AI', next: 'quiz01_retry' },
+          { label: 'Broad AI', next: 'quiz01_retry' },
+          { label: 'Narrow AI', next: 'quiz02' }
+        ]
+      },
+      quiz01_retry: {
+        text: [
+          'Not quite. Narrow AI handles only one task well.',
+          'Try again, which AI level masters just one single, focused task?'
+        ],
+        choices: [
+          { label: 'General AI', next: 'quiz01_retry' },
+          { label: 'Broad AI', next: 'quiz01_retry' },
+          { label: 'Narrow AI', next: 'quiz02' }
+        ]
+      },
+
+      quiz02: {
+        text: [
+          'Which AI level can predict global weather and future trends?'
+        ],
+        choices: [
+          { label: 'Narrow AI', next: 'quiz02_retry' },
+          { label: 'General AI', next: 'quiz02_retry' },
+          { label: 'Broad AI', next: 'quiz03' }
+        ]
+      },
+      quiz02_retry: {
+        text: [
+          'Wrong path. Broad AI handles many related tasks.',
+          'Try again, which AI level can predict global weather and future trends?'
+        ],
+        choices: [
+          { label: 'Narrow AI', next: 'quiz02_retry' },
+          { label: 'General AI', next: 'quiz02_retry' },
+          { label: 'Broad AI', next: 'quiz03' }
+        ]
+      },
+      quiz03: {
+        text: [
+          'What can AI NOT do yet compared to humans?'
+        ],
+        choices: [
+          { label: 'Run search queries', next: 'quiz03_retry' },
+          { label: 'Recognize objects or understand language', next: 'quiz03_retry' },
+          { label: 'Learn patterns or make predictions', next: 'quiz03_retry' },
+          { label: 'Think abstractly, plan, or invent new ideas', next: 'village' }
+        ]
+      },
+      quiz03_retry: {
+        text: [
+          'That is not the truth. Humans still lead in creativity and strategy.',
+          'Try again, what can AI NOT do yet compared to humans?'
+        ],
+        choices: [
+          { label: 'Run search queries', next: 'quiz03_retry' },
+          { label: 'Recognize objects or understand language', next: 'quiz03_retry' },
+          { label: 'Learn patterns or make predictions', next: 'quiz03_retry' },
+          { label: 'Think abstractly, plan, or invent new ideas', next: 'village' }
+        ]
+      },
+      village: {
+        text: [
+          'You have passed the Trial of Wisdom!',
+          'AI today cannot think abstractly or invent new ideas like humans.',
+          'Your insight earns the tribe 10 Raw Data 📄.',
+        ],
+        choices: [
+          { label: 'Return to Village', next: 'backToVillage' },
+          { label: 'Seek the Next Secret', next: 'nextSection' }
+        ]
+      }
+
+    }
   }
 };
