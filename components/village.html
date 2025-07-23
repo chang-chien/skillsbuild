@@ -1,41 +1,31 @@
 <section class="village-screen">
-  <!-- <div class="building wall-img" data-title="Wall" data-type="info">
-    <img src="../assets/images/buildings/wallL1.png" alt="Wall Level 1">
-    <span class="label">Wall: Level 1</span>
-  </div> -->
-
   <div class="building ai-img" id="ai" data-title="AI Center" data-type="quiz">
-    <img src="../assets/images/buildings/aiL1.png" alt="AI Center Level 1">
+    <img src="./assets/images/buildings/aiL1.png" alt="AI Center Level 1">
     <span class="label">AI Center: Level 1</span>
   </div>
 
-  <div class="building electric-img" data-title="Electric Plant" data-type="info">
-    <img src="../assets/images/buildings/electricL1.png" alt="Electric Plant Level 1">
-    <span class="label">Electric Plant: Level 1<br>⚡ 100 / hour</span>
-  </div>
-
   <div class="building defense-img" id="defense" data-title="Defense System" data-type="quiz">
-    <img src="../assets/images/buildings/defenseL1.png" alt="Defense System Level 1">
+    <img src="./assets/images/buildings/defenseL1.png" alt="Defense System Level 1">
     <span class="label">Defense System: Level 1<br>🔐 100 / hour</span>
   </div>
 
   <div class="building compute-img" id="compute" data-title="Compute Node" data-type="quiz">
-    <img src="../assets/images/buildings/computeL1.png" alt="Compute Node Level 1">
+    <img src="./assets/images/buildings/computeL1.png" alt="Compute Node Level 1">
     <span class="label">Compute Node: Level 1<br>⚙️ 100 / hour</span>
   </div>
 
   <div class="building data-img" id="data" data-title="Data Center" data-type="quiz">
-    <img src="../assets/images/buildings/dataL1.png" alt="Data Center Level 1">
+    <img src="./assets/images/buildings/dataL1.png" alt="Data Center Level 1">
     <span class="label">Data Center: Level 1<br>📊 100 / hour</span>
   </div>
 
   <div class="building academic-img" id="academic" data-title="Academic" data-type="info">
-    <img src="../assets/images/buildings/academic.png" alt="Academic Level 1">
+    <img src="./assets/images/buildings/academic.png" alt="Academic Level 1">
     <span class="label">Academic: Level 1</span>
   </div>
 
   <div class="building arena-img" id="arena" data-title="Arena" data-type="info">
-    <img src="../assets/images/buildings/arena.png" alt="Arena Level 1">
+    <img src="./assets/images/buildings/arena.png" alt="Arena Level 1">
     <span class="label">Arena: Level 1</span>
   </div>
 </section>
@@ -44,11 +34,12 @@
   .village-screen {
     position: relative;
     height: 100%;
-    background-image: url('../assets/images/villageBG.png'); 
-    background-size: cover;
+    aspect-ratio: 16/9;
+    background-size: auto 100%;
     background-position: center;
+    background-image: url('./assets/images/villageBG.png'); 
     background-repeat: no-repeat;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .building {
@@ -84,12 +75,16 @@
   }
 
   /* Building-specific positions */
-  .wall-img   { top: 30%; right: 30%; width: 500px; z-index: 10; }
-  .ai-img     { top: 10px; right: 40px; width: 120px; z-index: 10; }
-  .electric-img { top: 0px; left: -40px; width: 250px; z-index: 10; }
-  .defense-img { bottom: 20px; left: 40px; width: 150px; z-index: 10; }
-  .compute-img  { bottom: 25px; right: 80px; width: 150px; z-index: 10; }
-  .data-img    { top: 200px; left: 180px; width: 150px; z-index: 10; }
-  .academic-img    { top: 8%; right: 26%; width: 200px; z-index: 10; }
-  .arena-img    { top: 35%; right: 30%; width: 500px; z-index: 10; }
+  .ai-img     { position: absolute; top: 62%; left: 12%; transform: translate(-50%, -50%); z-index: 10; }
+  .ai-img img    { height: calc(78vh*(127/360)); width: auto; }
+  .defense-img { position: absolute; top: 28.5%; right: -3.5%; transform: translate(-50%, -50%);  z-index: 10; }
+  .defense-img img { height: calc(78vh*(198/360)); width: auto; }
+  .compute-img  { position: absolute; top: 16.5%; left: 36.5%; transform: translate(-50%, -50%); z-index: 10; }
+  .compute-img img { height: calc(78vh*(104/360)); width: auto; }
+  .data-img    { position: absolute; top: 29.2%; left: 17.6%; transform: translate(-50%, -50%); z-index: 10; }
+  .data-img img   { height: calc(78vh*(120/360)); width: auto; }
+  .academic-img    { position: absolute; top: 20%; right: 14%; transform: translate(-50%, -50%); z-index: 15; }
+  .academic-img img   { height: calc(78vh*(127/360)); width: auto; }
+  .arena-img    { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10;}
+  .arena-img img  { height: calc(78vh*(134/360)); width: auto; }
 </style>

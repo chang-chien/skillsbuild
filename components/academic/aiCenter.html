@@ -2,7 +2,7 @@
   <div class="quiz-container">
     <!-- Left: NPC Image -->
     <div class="npc-panel">
-      <img src="../assets/images/avatar/npc_academic_mentor.png" alt="Elder Henry">
+      <img src="./assets/images/avatar/npc_academic_mentor.png" alt="Elder Henry">
       <p class="npc-name">Elder Henry</p>
     </div>
 
@@ -23,9 +23,10 @@
   .quiz-section {
     position: relative;
     height: 100%; /* Full viewport height for vertical centering */
-    background-image: url('../assets/images/villageBG.png'); 
-    background-size: cover;
+    aspect-ratio: 16/9;
+    background-size: auto 100%;
     background-position: center;
+    background-image: url('./assets/images/villageBG.png'); 
     background-repeat: no-repeat;
     padding: 2rem; /* Optional: prevent edge clipping on small screens */
     box-sizing: border-box;    
@@ -33,8 +34,18 @@
     align-items: baseline;   /* Vertically upper */
     justify-content: center; /* Horizontally center */
   }
+  
+.quiz-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.6); /* 調這裡的透明度淡化 */
+  z-index: 1;
+  pointer-events: none;
+}
 
   .quiz-container {
+  z-index: 10;
     display: flex;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;

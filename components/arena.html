@@ -121,15 +121,17 @@
           <span class="">15 ⚡</span>
       </div>  
     </div>
+  </div>
 </section>
 
 <style>
   .quiz-section {
     position: relative;
     height: 100%;
-    background-image: url('../assets/images/villageBG.png'); 
-    background-size: cover;
+    aspect-ratio: 16/9;
+    background-size: auto 100%;
     background-position: center;
+    background-image: url('./assets/images/villageBG.png'); 
     background-repeat: no-repeat;
     padding: 2rem;
     box-sizing: border-box;    
@@ -139,7 +141,17 @@
     justify-content: center;
   }
 
+  .quiz-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.6); /* 調這裡的透明度淡化 */
+  z-index: 1;
+  pointer-events: none;
+}
   .button-grid {
+  z-index: 10;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
@@ -261,6 +273,8 @@
   }
 
   .leaderboard {
+  z-index: 10;
+
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 1rem;
