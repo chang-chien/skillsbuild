@@ -137,13 +137,14 @@ function loadArena() {
 }
 
 // Function to load external HTML into target container
-export async function loadComponent(path, targetId = 'game-container') {
+export async function loadComponent(path, targetId = 'game-container', callback = null) {
   try {
     const response = await fetch(path);
     if (!response.ok) throw new Error(`Failed to load ${path}`);
 
     const html = await response.text();
     document.getElementById(targetId).innerHTML = html;
+    if (typeof callback === 'function') callback();
 
     return true;
   } catch (error) {

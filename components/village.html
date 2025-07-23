@@ -28,6 +28,11 @@
     <img src="./assets/images/buildings/arena.png" alt="Arena Level 1">
     <span class="label">Arena: Level 1</span>
   </div>
+
+  <div class="building lab-img" id="lab" data-title="Arena" data-type="info">
+    <img src="./assets/images/buildings/aiLabL1.png" alt="AI Lab Level 1">
+    <span class="label">AI Lab: Level 1</span>
+  </div>
 </section>
 
 <style>
@@ -75,16 +80,18 @@
   }
 
   /* Building-specific positions */
-  .ai-img     { position: absolute; top: 62%; left: 12%; transform: translate(-50%, -50%); z-index: 10; }
+  .ai-img     { position: absolute; top: 62%; left: 12%; transform: translate(-50%, -50%); z-index: 10; opacity: 0;}
   .ai-img img    { height: calc(78vh*(127/360)); width: auto; }
-  .defense-img { position: absolute; top: 28.5%; right: -3.5%; transform: translate(-50%, -50%);  z-index: 10; }
+  .defense-img { position: absolute; top: 28.5%; right: -3.5%; transform: translate(-50%, -50%);  z-index: 10; opacity: 0; cursor: no-drop;}
   .defense-img img { height: calc(78vh*(198/360)); width: auto; }
-  .compute-img  { position: absolute; top: 16.5%; left: 36.5%; transform: translate(-50%, -50%); z-index: 10; }
+  .compute-img  { position: absolute; top: 16.5%; left: 36.5%; transform: translate(-50%, -50%); z-index: 10; opacity: 0; cursor: no-drop;}
   .compute-img img { height: calc(78vh*(104/360)); width: auto; }
-  .data-img    { position: absolute; top: 29.2%; left: 17.6%; transform: translate(-50%, -50%); z-index: 10; }
+  .data-img    { position: absolute; top: 29.2%; left: 17.6%; transform: translate(-50%, -50%); z-index: 10; opacity: 0;}
   .data-img img   { height: calc(78vh*(120/360)); width: auto; }
-  .academic-img    { position: absolute; top: 20%; right: 14%; transform: translate(-50%, -50%); z-index: 15; }
+  .academic-img    { position: absolute; top: 20%; right: 14%; transform: translate(-50%, -50%); z-index: 15; opacity: 0;}
   .academic-img img   { height: calc(78vh*(127/360)); width: auto; }
-  .arena-img    { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10;}
+  .arena-img    { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; opacity: 0;}
   .arena-img img  { height: calc(78vh*(134/360)); width: auto; }
+  .lab-img    { position: absolute; top: 75.8%; left: 31.5%; transform: translate(-50%, -50%); z-index: 10; opacity: 0; cursor: no-drop;}
+  .lab-img img  { height: calc(78vh*(135/360)); width: auto; }
 </style>
