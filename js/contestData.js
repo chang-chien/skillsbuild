@@ -78,6 +78,18 @@ export const contestMapData = {
                 options: ["Watson", "GPT-3", "Delphi", "LaMDA"],
                 answer: "Delphi",
                 explanation: "Delphi is an AI model created to explore moral reasoning. It was trained on books, online forums, and Reddit to understand human ethical judgments.",
+            },
+            q14: {
+                question: "IBM was formed from the merger of three companies. Which of the following was NOT one of them?",
+                options: ["Tabulating Machine Company", "International Time Recording Company", "Computing Scale Company", "American Telephone Company"],
+                answer: "American Telephone Company",
+                explanation: "IBM was originally formed in 1911 through the merger of three companies: the Tabulating Machine Company, the International Time Recording Company, and the Computing Scale Company. The American Telephone Company was not part of this merger.",
+            },
+            q15: {
+                question: "In 19th-century Britain, Charles Babbage and Ada Lovelace designed a groundbreaking machine that marked a milestone in the Tabulating Era. What was the name of this machine?",
+                options: ["Turing Machine", "Analytical Engine", "Tabulating Machine", "Difference Device"],
+                answer: "Analytical Engine",
+                explanation: "The Analytical Engine, designed by Charles Babbage and further conceptualized by Ada Lovelace, is considered a milestone in computing history. It was one of the earliest designs for a general-purpose computer and laid the groundwork for future computational machines.",
             }
         }
     }
