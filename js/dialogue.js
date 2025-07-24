@@ -12,7 +12,7 @@ export function init() {
     const dialogueText = document.getElementById('dialogue-text');
     const choiceBox = document.querySelector('.choice-box');
     const building = 'dataCenter';
-    // TODO: change secton to section01 durng the usability test
+    // TODO: change secton to section01 during the usability test
     const section = 'section06';
 
     if (!dialogueText || !choiceBox) {

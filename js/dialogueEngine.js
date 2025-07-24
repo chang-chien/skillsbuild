@@ -41,9 +41,9 @@ export class DialogueEngine {
 
   appendExplanation(isCorrect, text) {
     if (isCorrect === false) {
-      this.dialogueText.innerHTML += `<p><i> Not quite! ${text}</i></p>`;
+      this.dialogueText.innerHTML += `<p><i> ❌ Not quite! ${text}</i></p>`;
     } else if (isCorrect === true) {
-      this.dialogueText.innerHTML += `<p><i> Correct! ${text}</i></p><br><br>`;
+      this.dialogueText.innerHTML += `<p><i> ✅ Correct! ${text}</i></p><br><br>`;
     }
     setTimeout(() => {
       console.log("wait 2 sec");

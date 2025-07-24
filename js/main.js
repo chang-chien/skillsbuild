@@ -71,10 +71,8 @@ function attachBuildingListeners() {
     building.addEventListener('click', async () => {
 
       const buildingId = building.id; // e.g., "compute", "data", etc.
-      console.log(building);
       const buildingType = building.getAttribute("data-type"); // e.g., "upgrade", "contest", "info"
       // const buildingType = building.data-type; // e.g., "upgrade", "contest", "info"
-      console.log(`Building clicked: ${building.id} (${buildingType})`);
 
       let load = null;
       if (buildingType === 'dialogue') {
@@ -83,7 +81,6 @@ function attachBuildingListeners() {
         load = await loadComponent(`./components/${buildingId}.html`);
       }
 
-        console.log(`Loaded dialogue for ${buildingId}:`, load);
       if (load) {
         // Dynamically import the module script (after DOM is updated)
         import(`./${buildingType}.js`).then(module => {

@@ -27,7 +27,7 @@ export class ContestEngine {
   }
 
   appendExplanation(isCorrect, text) {
-    const resultText = isCorrect ? "Correct!" : "Not quite!";
+    const resultText = isCorrect ? "✅ Correct!" : "❌ Not quite!";
     this.contestText.innerHTML += `<p><i>${resultText} ${text}</i></p><br><br>`;
     this.currentQuizIndex++;
 

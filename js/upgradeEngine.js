@@ -46,7 +46,7 @@ export class UpgradeEngine {
   }
 
   appendExplanation(isCorrect, text) {
-    const resultText = isCorrect ? "Correct!" : "Not quite!";
+    const resultText = isCorrect ? "✅ Correct!" : "❌ Not quite!";
     this.upgradeText.innerHTML += `<p><i>${resultText} ${text}</i></p><br><br>`;
     this.currentQuizIndex++;
 

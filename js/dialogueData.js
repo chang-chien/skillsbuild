@@ -853,7 +853,7 @@ export const dialogueMapData = {
       guide: {
         text: [
           "<br><b>1. Collect</b>: <i>Gathering the voices of the realm</i><br>Begin your journey by collecting data from all corners—villager scrolls, merchant logs, scout reports. The better the source, the clearer the picture.<br><br>" +
-          "<b>2. Clean</b>: <i>Removing the dust of confusion</i><br>Not all scrolls are accurate. Some may be damaged or duplicated. Remove errors, organize names, and ensure your data is as sharp as your blade.<br><br>" +
+          "<b>2. Clean</b>: <i>Removing the dust of confusion</i><br>Not all scrolls are accurate. Some may be damaged or duplicated. Remove errors, organize names, and ensure your data is as sharp as your blade.Remember, this step spend 80% of the time<br><br>" +
           "<b>3. Analyze</b>: <i>Uncovering the hidden patterns</i><br>Study the trends—how harvests change, how enemies strike, when trades flourish. This step turns facts into strategy.<br><br>" +
           "<b>4. Visualize</b>: <i>Sharing the truth through sacred symbols</i><br>Charts, maps, and diagrams—tools to communicate your findings to warriors and council elders alike. A good visualization can sway even the most stubborn chieftain.<br><br>" +
           "These four steps form the sacred dance of data—each building upon the last. Perform them well, and even the stars will reveal their secrets to you."
@@ -875,7 +875,7 @@ export const dialogueMapData = {
       },
       quiz02: {
         text: [
-          "In which step did Charles share that he is careful to follow the company guidelines when storing data for security purposes?"
+          "In which step did Ava share that he is careful to follow the company guidelines when storing data for security purposes?"
         ],
         choices: [
           { label: "Collect", next: 'quiz03', isCorrect: true },
@@ -887,7 +887,7 @@ export const dialogueMapData = {
       },
       quiz03: {
         text: [
-          "In which step did Charles share that he spends most of his time, nearly 80%? ",
+          "In which step did Ava share that he spends most of his time, nearly 80%? ",
         ],
         choices: [
           { label: "Visualize", next: 'quiz04', isCorrect: false },
@@ -899,7 +899,7 @@ export const dialogueMapData = {
       },
       quiz04: {
         text: [
-          "In which step did Charles share he figures out the best way to depict his results in a team presentation?",
+          "In which step did Ava share he figures out the best way to depict his results in a team presentation?",
         ],
         choices: [
           { label: "Visualize", next: 'quiz05', isCorrect: true },
@@ -911,7 +911,7 @@ export const dialogueMapData = {
       },
       quiz05: {
         text: [
-          "In which step did Charles share that he gets excited to investigate and use the right analytical methods to find root causes?",
+          "In which step did Ava share that he gets excited to investigate and use the right analytical methods to find root causes?",
         ],
         choices: [
           { label: "Clean", next: 'village', isCorrect: false },
@@ -919,7 +919,7 @@ export const dialogueMapData = {
           { label: "Analyze", next: 'village', isCorrect: true  },
           { label: "Collect", next: 'village', isCorrect: false }
         ],
-        explanation: "In the <b>Analyze</b> step, Charles shared that he uses problem-solving skills when he analyzes data to analyze trends and find root causes to answer the business question."
+        explanation: "In the <b>Analyze</b> step, Ava shared that he uses problem-solving skills when he analyzes data to analyze trends and find root causes to answer the business question."
       },
       village: {
         text: [
