@@ -1591,7 +1591,7 @@ export const dialogueMapData = {
     },
     section05: {
       title: 'Getting Started with Artificial Intelligence',
-      sectionName: 'AI Center Section 04: What are the three era of computing?',
+      sectionName: 'AI Center Section 05: What are the three era of computing?',
       starter: {
         text: [
           'Leader, a new storm rose during the Great War of the old world.',
@@ -1853,6 +1853,306 @@ export const dialogueMapData = {
           { label: 'Next section', next: 'nextSection' }
         ]
       },
-    }
+    },
+    section07: {
+      title: 'Getting Started with Artificial Intelligence',
+      sectionName: 'AI Center Section 07: What are the three era of computing?',
+      starter: {
+        text: [
+          "Leader, all knowledge begins with data—raw whispers from the world, captured in scroll, stone, or song.",
+          "But data wears many forms. Three, to be exact: structured, unstructured, and semi-structured.",
+          "Each speaks to the machine differently. Understanding them is key to commanding the power of AI."
+        ],
+        choices: [
+          { label: "Speak of the three forms.", next: "intro" },
+          { label: "Skip lore. Test me now.", skipTo: "quiz01" }
+        ]
+      },
+      intro: {
+        text: [
+          "Structured data—like scrolls with rows and columns. Clear. Ordered. Easy to count.",
+          "Unstructured data—wild like cave paintings and chants. No set form. Harder to tame.",
+          "Semi-structured data—neither wild nor tame. Carved with hidden runes called metadata.",
+          "The ancients learned to work with all three, for each hides power when seen rightly."
+        ],
+        choices: [
+          { label: "Give me more examples.", next: "guide" },
+          { label: "I’m ready for the trial.", skipTo: "quiz01" }
+        ]
+      },
+      guide: {
+        text: [
+          "Structured: Think of the war ledger—names, numbers, dates in perfect rows. Excel scrolls. Tables of tribute. Hotel or flight logs.",
+          "Unstructured: The chants of villagers, paintings on stone, voice echoes, and random letters from spies. Songs, tweets, X-rays, comments—hard to sort.",
+          "Semi-structured: A scroll with pictures and tags. A crow’s message marked with place and hour. Videos with hashtags. Not in rows, but still sortable.",
+          "Metadata is the hidden rune—it lets the machine sort chaos into sense."
+        ],
+        choices: [
+          { label: "Now let me prove myself.", next: "quiz01" }
+        ]
+      },
+      quiz01: {
+        text: [
+          'Which of the following do you think might be an example of unstructured data? ',
+          ''
+        ],
+        choices: [
+          { label: 'Your math grades in high school ', next: 'quiz01_retry' },
+          { label: 'Your social media posts', next: 'quiz02' },
+          { label: 'Your family tree ', next: 'quiz01_retry' },
+          { label: 'How far you walked to visit a friend ', next: 'quiz01_retry' }
+        ]
+      },
+      quiz01_retry: {
+        text: [
+          'Your social media posts are an example of unstructured data.',
+          'Try again, how far you walked to visit a friend '
+        ],
+        choices: [
+          { label: 'Your math grades in high school ', next: 'quiz01_retry' },
+          { label: 'Your social media posts', next: 'quiz02' },
+          { label: 'Your family tree ', next: 'quiz01_retry' },
+          { label: 'How far you walked to visit a friend ', next: 'quiz01_retry' }
+        ]
+      },
+      quiz02: {
+        text: [
+          'Which of the following do you think might be an example of structured data?'
+        ],
+        choices: [
+          { label: 'Productivity applications ', next: 'quiz02_retry' },
+          { label: 'Video files ', next: 'quiz02_retry' },
+          { label: 'Hotel and ticket reservation data', next: 'quiz03' },
+          { label: 'Surveillance data ', next: 'quiz02_retry' }
+        ]
+      },
+      quiz02_retry: {
+        text: [
+          'Hotel and ticket reservation data is an example of structured data.',
+          'Try again, which of the following do you think might be an example of structured data?'
+        ],
+        choices: [
+          { label: 'Productivity applications ', next: 'quiz02_retry' },
+          { label: 'Video files ', next: 'quiz02_retry' },
+          { label: 'Hotel and ticket reservation data', next: 'quiz03' },
+          { label: 'Surveillance data ', next: 'quiz02_retry' }
+        ]
+      },
+      quiz03: {
+        text: [
+          'Which of the following do you think might be an example of semi-structured data? '
+        ],
+        choices: [
+          { label: 'Tweets organized by hashtags', next: 'village' },
+          { label: 'Online reviews ', next: 'quiz03_retry' },
+          { label: 'Billing information ', next: 'quiz03_retry' },
+          { label: 'Audio files ', next: 'quiz03_retry' }
+        ]
+      },
+      quiz03_retry: {
+        text: [
+          'Tweets organized by hashtags are an example of semi-structured data. Try again.',
+          'Which of the following do you think might be an example of semi-structured data? '
+        ],
+        choices: [
+          { label: 'Tweets organized by hashtags', next: 'village' },
+          { label: 'Online reviews ', next: 'quiz03_retry' },
+          { label: 'Billing information ', next: 'quiz03_retry' },
+          { label: 'Audio files ', next: 'quiz03_retry' }
+        ]
+      },
+      village: {
+        text: [
+          'You’ve passed the Trials of Command, Tribal Leader.',
+          'Your wisdom earns the tribe 10 Raw Data 📄.',
+          'Will you rest here or venture toward the next era’s awakening?'
+        ],
+        choices: [
+          { label: 'Return to village', next: 'backToVillage' },
+          { label: 'Continue the journey', next: 'nextSection' }
+        ]
+      }
+    },
+    section08: {
+      title: 'Getting Started with Artificial Intelligence',
+      sectionName: 'AI Center Section 08: What are the three era of computing?',
+      starter: {
+        text: [
+          "Unstructured data accounts for the vast majority of the world's data (about 80%) and contains huge value, but is difficult to analyze using traditional methods due to its variability and lack of organization.",
+          "AI is the key to solving this challenge. It can give structure to unstructured data, discover new knowledge from it, and have the ability to self-learn, thus changing everything."
+        ],
+        choices: [
+          { label: 'So how do we face this chaos?', next: 'intro' },
+          { label: 'Skip to the test. I’m ready.', skipTo: 'quiz01' }
+        ]
+      },
+      intro: {
+        text: [
+          "The importance of unstructured data is increasing rapidly.", 
+          "It is estimated that 95% of enterprises prioritize unstructured data management.",
+          "Currently, experts estimate that approximately 80% of the world’s data is unstructured.",
+          "It contains a large number of variables and changes very rapidly, so no traditional computer program can learn much from it.",
+          "Despite this, unstructured data holds answers to nearly every aspect of civilization, from disease prevention to criminal activity to the stock market.",
+          "Without these answers, individuals and organizations will be unable to make useful predictions or recommendations.",
+          "However, AI gives structure to the chaos. It reads the shapeless. It finds meaning."
+        ],
+        choices: [
+          { label: 'What makes AI so different?', next: 'guide' },
+          { label: 'Understood. Let’s challenge fate.', skipTo: 'quiz01' }
+        ]
+      },
+      guide: {
+        text: [
+          "Artificial intelligence (AI) can reveal the value of unstructured data (dark data).",
+          "AI uses new types of computing (partially modeled after the human brain) to rapidly give structure to dark data and enable new discoveries to be made from it.",
+          "AI can even teach itself, learning from the data it manages how to make better predictions over time.",
+          "“This is the age of AI, it changes everything!”"
+        ],
+        choices: [
+          { label: 'Let me face the trial.', next: 'quiz01' }
+        ]
+      },
+      quiz01: {
+        text: [
+          'Based on the following structured data, what was the highest temperature in New York during a recent week?',
+        ],
+        choices: [
+          { label: 'Monday, 32°F (0°C) ', next: 'quiz01_retry' },
+          { label: 'Tuesday, 36°F (2.2°C) ', next: 'quiz01_retry' },
+          { label: 'Wednesday, 22°F (-5.6°C) ', next: 'quiz01_retry' },
+          { label: 'Thursday, 19°F (-7.2°C) ', next: 'quiz01_retry' },
+          { label: 'Friday, 10°F (-12.2°C) ', next: 'quiz01_retry' },
+          { label: 'Saturday, 37°F (2.8°C)', next: 'quiz02' },
+          { label: 'Sunday, 31°F (-0.6°C) ', next: 'quiz01_retry' }
+        ]
+      },
+      quiz01_retry: {
+        text: [
+          'The highest temperature that week was 37°F (2.8°C) on Saturday.',
+          'Try again, based on the following structured data, what was the highest temperature in New York during a recent week?'
+        ],
+        choices: [
+          { label: 'Monday, 32°F (0°C) ', next: 'quiz01_retry' },
+          { label: 'Tuesday, 36°F (2.2°C) ', next: 'quiz01_retry' },
+          { label: 'Wednesday, 22°F (-5.6°C) ', next: 'quiz01_retry' },
+          { label: 'Thursday, 19°F (-7.2°C) ', next: 'quiz01_retry' },
+          { label: 'Friday, 10°F (-12.2°C) ', next: 'quiz01_retry' },
+          { label: 'Saturday, 37°F (2.8°C)', next: 'quiz02' },
+          { label: 'Sunday, 31°F (-0.6°C) ', next: 'quiz01_retry' }
+        ]
+      },
+      quiz02: {
+        text: [
+          'Based on the following unstructured data, what was the highest temperature in Buenos Aires last week? '
+        ],
+        choices: [
+          { label: 'Watch a hilarious video of a dog chasing a rat. ', next: 'quiz02_retry' },
+          { label: 'Let’s just say that Simcha’s dress was unfortunate. ', next: 'quiz02_retry' },
+          { label: 'The last chapter is 32 pages long except on a smartphone. ', next: 'quiz02_retry' },
+          { label: 'Through the window, the thermometer said 58°F. ', next: 'quiz02_retry' },
+          { label: 'Core 16 apples and stuff them with cinnamon. ', next: 'quiz02_retry' },
+          { label: 'It feels like it’s 21°C.', next: 'quiz03' },
+          { label: 'He got a 90 on the exam. ', next: 'quiz02_retry' }
+        ]
+      },
+      quiz02_retry: {
+        text: [
+          'The highest temperature was 21° Celsius (not Fahrenheit). ',
+          'Try again, based on the following unstructured data, what was the highest temperature in Buenos Aires last week? '
+        ],
+        choices: [
+          { label: 'Watch a hilarious video of a dog chasing a rat. ', next: 'quiz02_retry' },
+          { label: 'Let’s just say that Simcha’s dress was unfortunate. ', next: 'quiz02_retry' },
+          { label: 'The last chapter is 32 pages long except on a smartphone. ', next: 'quiz02_retry' },
+          { label: 'Through the window, the thermometer said 58°F. ', next: 'quiz02_retry' },
+          { label: 'Core 16 apples and stuff them with cinnamon. ', next: 'quiz02_retry' },
+          { label: 'It feels like it’s 21°C.', next: 'quiz03' },
+          { label: 'He got a 90 on the exam. ', next: 'quiz02_retry' }
+        ]
+      },
+      quiz03: {
+        text: [
+          "This is a special trial that include previous advanture.",
+          "<b>Spend 10 electricity⚡ to prove your readiness to face the battle ahead.</b>",
+        ],
+        warning: "If you answer wrong more than one question, you will need to retry the whole quiz.",
+        choices: [
+          { label: "Sure, spend 10 electricity⚡", next: 'quiz02', materialCost: 10 },
+          { label: "I may need some time to prepare", next: 'backToVillage' }
+        ]
+      },
+      quiz04: {
+        text: [
+          "If names and email addresses are organized using a spreadsheet software, like Google Sheets or Microsoft Excel, which type of data is this? "
+        ],
+        choices: [
+          { label: "Structured data", next: 'quiz05', isCorrect: true },
+          { label: "Semi-structured data ", next: 'quiz05', isCorrect: false },
+          { label: "True data ", next: 'quiz05', isCorrect: false },
+          { label: "Unstructured data ", next: 'quiz05', isCorrect: true  }
+        ],
+        explanation: "Structured data is information that can be organized in rows and columns, such as names and email addresses, using a spreadsheet software like Google Sheets or Microsoft Excel."
+      },
+      quiz05: {
+        text: [
+          "Approximately how much of the world’s data today is unstructured? "
+        ],
+        choices: [
+          { label: "40% ", next: 'quiz06', isCorrect: false },
+          { label: "85% ", next: 'quiz06', isCorrect: false },
+          { label: "90% ", next: 'quiz06', isCorrect: false },
+          { label: "80% ", next: 'quiz06', isCorrect: true }
+        ],
+        explanation: "Today, about 80% of the world’s data is unstructured. "
+      },
+      quiz06: {
+        text: [
+          "Fill in the blank. Data that is not completely raw and contains elements such as tags and organizational metadata is known as _______________ . "
+        ],
+        choices: [
+          { label: "true data ", next: 'quiz07', isCorrect: false },
+          { label: "structured data ", next: 'quiz07', isCorrect: false },
+          { label: "unstructured data ", next: 'quiz07', isCorrect: false },
+          { label: "semi-structured data", next: 'quiz07', isCorrect: true }
+        ],
+        explanation: "Semi-structured data is the “bridge” between structured and unstructured data. It does not have a predefined data model and is more complex than structured data, yet easier to store than unstructured data. Semi-structured data uses metadata to identify specific data characteristics and scale data into records and preset fields. "
+      },
+      quiz07: {
+        text: [
+          "Which of the following is most likely to be unstructured data? "
+        ],
+        choices: [
+          { label: "The breeds of entrants in a dog show ", next: 'quiz08', isCorrect: false },
+          { label: "Prescriptions for patients in a large hospital ", next: 'quiz08', isCorrect: false },
+          { label: "Ingredients for baking bread ", next: 'quiz08', isCorrect: false },
+          { label: "Social media posts ", next: 'quiz08', isCorrect: true }
+        ],
+        explanation: "The content of social media posts is an example of unstructured data. Unstructured data, also known as dark data, is typically categorized as qualitative data. It can't be processed and analyzed with conventional data tools and methods."
+      },
+      quiz08: {
+        text: [
+          "Shelby writes a survey that includes the following question: “Do you like chocolate (circle Yes or No), and why?” ",
+          "Which of the following describes the data Shelby will collect? "
+        ],
+        choices: [
+          { label: "Structured data ", next: 'village', isCorrect: false },
+          { label: "Neither structured data nor unstructured data ", next: 'village', isCorrect: false },
+          { label: "Both structured data and unstructured data ", next: 'village', isCorrect: true },
+          { label: "Unstructured data ", next: 'village', isCorrect: false }
+        ],
+        explanation: "In the first part of the question, “Do you like chocolate (circle Yes or No)...”, Shelby collects structured data. In the second part of the question, “and why?”, Shelby collects unstructured data."
+      },
+      village: {
+        text: [
+          'You’ve passed the Trials of Command, Tribal Leader.',
+          'Your wisdom earns the tribe 10 Raw Data 📄.',
+          'Will you rest here or venture toward the next era’s awakening?'
+        ],
+        choices: [
+          { label: 'Return to village', next: 'backToVillage' },
+          { label: 'Continue the journey', next: 'nextSection' }
+        ]
+      }
+    },
   }
 };
