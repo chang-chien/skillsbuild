@@ -2,7 +2,7 @@ import { DialogueEngine } from './dialogueEngine.js';
 
 let dialogueEngine = null;
 
-export function initDialogue() {
+export function init() {
   requestAnimationFrame(() => {
 
     setTimeout(() => {

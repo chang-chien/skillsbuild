@@ -13,7 +13,7 @@ const buildingKeyMap = {
 // Initialize resources
 localStorage.setItem("buildingUpgrade", JSON.stringify({
     aiCenter: true,
-    dataCenter: true,
+    dataCenter: false,
     defenceSystem: false,
     computeNode: false
 }));
@@ -74,7 +74,8 @@ function applyUpgradeStatus() {
 }
 
 // Exported init function (matches your style)
-export function initUpgradeButtons() {
+export function init() {
+  console.log("Initializing upgrade buttons");
   requestAnimationFrame(() => {
     initializeBuildingUpgrade();
     applyUpgradeStatus();

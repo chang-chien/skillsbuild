@@ -86,7 +86,7 @@ function applyContestStatus() {
 }
 
 // Exported init function (matches your style)
-export function initContestButtons() {
+export function init() {
   requestAnimationFrame(() => {
     initializeBuildingContest();
     applyContestStatus();

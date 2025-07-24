@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const btnQuests = document.getElementById('btn-quests');
   if (btnQuests) {
-    btnQuests.addEventListener('click', () => {
+    btnQuests.addEventListener('click', async () => {
       loadComponent('./components/quest.html', 'game-container');
     });
   }
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const btnLeaderboard = document.getElementById('btn-leaderboard');
   if (btnLeaderboard) { 
-    btnLeaderboard.addEventListener('click', () => {
+    btnLeaderboard.addEventListener('click', async () => {
       loadComponent('./components/leaderboard.html', 'game-container');
     });
   }
@@ -56,46 +56,42 @@ function loadVillage() {
 }
 
 function loadNews() {
-  console.log('Loading news component...');
   loadComponent('./components/news.html', 'game-container');
 }
 
 function loadInsight() {
-  console.log('Loading insght component...');
   loadComponent('./components/insight.html', 'game-container');
 }
 
 
 // 🔁 Called after village.html loads
 function attachBuildingListeners() {
-  const quizBuildings = document.querySelectorAll('.building[data-type="quiz"]');
-  quizBuildings.forEach(building => {
-    building.addEventListener('click', () => {
+  const buildings = document.querySelectorAll('.building');
+  buildings.forEach(building => {
+    building.addEventListener('click', async () => {
+
       const buildingId = building.id; // e.g., "compute", "data", etc.
-      loadComponent(`./components/questions/${buildingId}.html`);
+      console.log(building);
+      const buildingType = building.getAttribute("data-type"); // e.g., "upgrade", "contest", "info"
+      // const buildingType = building.data-type; // e.g., "upgrade", "contest", "info"
+      console.log(`Building clicked: ${building.id} (${buildingType})`);
 
-      // Dynamically import the module script (after DOM is updated)
-      import('./dialogue.js').then(module => {
-        if (module && typeof module.initDialogue === 'function') {
-          module.initDialogue();
-        }
-      });
-    });
-  });
+      let load = null;
+      if (buildingType === 'dialogue') {
+        load = await loadComponent(`./components/questions/${buildingId}.html`);
+      } else if (buildingType === 'contest' || buildingType === 'upgrade') {
+        load = await loadComponent(`./components/${buildingId}.html`);
+      }
 
-  const infoBuildings = document.querySelectorAll('.building[data-type="info"]');
-  infoBuildings.forEach(building => {
-    console.log(`Attaching click listener to info building: ${building.id}`);
-    building.addEventListener('click', () => {
-      const buildingId = building.id; // e.g., "compute", "data", etc.
-      loadComponent(`./components/${buildingId}.html`);
-
-      // Dynamically import the module script (after DOM is updated)
-      import('./upgrade.js').then(module => {
-        if (module && typeof module.initUpgradeButtons === 'function') {
-          module.initUpgradeButtons();
-        }
-      });
+        console.log(`Loaded dialogue for ${buildingId}:`, load);
+      if (load) {
+        // Dynamically import the module script (after DOM is updated)
+        import(`./${buildingType}.js`).then(module => {
+          if (module && typeof module.init === 'function') {
+            module.init();
+          }
+        });        
+      }
     });
   });
 }
@@ -106,8 +102,8 @@ function loadData() {
 
   // Dynamically import the module script (after DOM is updated)
   import('./dialogue.js').then(module => {  
-    if (module && typeof module.initDialogue === 'function') {
-      module.initDialogue();
+    if (module && typeof module.init === 'function') {
+      module.init();
     }
   });
 }
@@ -118,8 +114,8 @@ function loadAcademic() {
 
   // Dynamically import the module script (after DOM is updated)
   import('./upgrade.js').then(module => {  
-    if (module && typeof module.initUpgradeButtons === 'function') {
-      module.initUpgradeButtons();
+    if (module && typeof module.init === 'function') {
+      module.init();
     }
   });
 }
@@ -130,8 +126,8 @@ function loadArena() {
 
   // Dynamically import the module script (after DOM is updated)
   import('./contest.js').then(module => {  
-    if (module && typeof module.initContestButtons === 'function') {
-      module.initContestButtons();
+    if (module && typeof module.init === 'function') {
+      module.init();
     }
   });
 }

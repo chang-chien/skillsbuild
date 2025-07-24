@@ -1,37 +1,37 @@
 <section class="village-screen">
-  <div class="building ai-img" id="ai" data-title="AI Center" data-type="quiz">
+  <div class="building ai-img" id="ai" data-title="AI Center" data-type="dialogue">
     <img src="./assets/images/buildings/aiL1.png" alt="AI Center Level 1">
     <span class="label">AI Center: Level 1</span>
   </div>
 
-  <div class="building defense-img" id="defense" data-title="Defense System" data-type="quiz">
+  <div class="building defense-img" id="defense" data-title="Defense System">
     <img src="./assets/images/buildings/defenseL1.png" alt="Defense System Level 1">
-    <span class="label">Defense System: Level 1<br>🔐 100 / hour</span>
+    <span class="label">Defense System<br>Coming Soon</span>
   </div>
 
-  <div class="building compute-img" id="compute" data-title="Compute Node" data-type="quiz">
+  <div class="building compute-img" id="compute" data-title="Compute Node">
     <img src="./assets/images/buildings/computeL1.png" alt="Compute Node Level 1">
-    <span class="label">Compute Node: Level 1<br>⚙️ 100 / hour</span>
+    <span class="label">Compute Node<br>Coming Soon</span>
   </div>
 
-  <div class="building data-img" id="data" data-title="Data Center" data-type="quiz">
+  <div class="building data-img" id="data" data-title="Data Center" data-type="dialogue">
     <img src="./assets/images/buildings/dataL1.png" alt="Data Center Level 1">
-    <span class="label">Data Center: Level 1<br>📊 100 / hour</span>
+    <span class="label">Data Center: Level 1</span>
   </div>
 
-  <div class="building academic-img" id="academic" data-title="Academic" data-type="info">
+  <div class="building academic-img" id="academic" data-title="Academic" data-type="upgrade">
     <img src="./assets/images/buildings/academic.png" alt="Academic Level 1">
-    <span class="label">Academic: Level 1</span>
+    <span class="label">Academic</span>
   </div>
 
-  <div class="building arena-img" id="arena" data-title="Arena" data-type="info">
+  <div class="building arena-img" id="arena" data-title="Arena" data-type="contest">
     <img src="./assets/images/buildings/arena.png" alt="Arena Level 1">
-    <span class="label">Arena: Level 1</span>
+    <span class="label">Arena</span>
   </div>
 
-  <div class="building lab-img" id="lab" data-title="Arena" data-type="info">
+  <div class="building lab-img" id="lab" data-title="Arena">
     <img src="./assets/images/buildings/aiLabL1.png" alt="AI Lab Level 1">
-    <span class="label">AI Lab: Level 1</span>
+    <span class="label">AI Lab<br>Coming Soon</span>
   </div>
 </section>
 
@@ -68,7 +68,7 @@
     background-color: rgba(0,0,0,0.7);
     color: #fff;
     padding: 4px 8px;
-    font-size: 13px;
+    font-size: 1rem;
     border-radius: 4px;
     white-space: nowrap;
     pointer-events: none;
@@ -80,18 +80,18 @@
   }
 
   /* Building-specific positions */
-  .ai-img     { position: absolute; top: 62%; left: 12%; transform: translate(-50%, -50%); z-index: 10; opacity: 0;}
-  .ai-img img    { height: calc(78vh*(127/360)); width: auto; }
-  .defense-img { position: absolute; top: 28.5%; right: -3.5%; transform: translate(-50%, -50%);  z-index: 10; opacity: 0; cursor: no-drop;}
-  .defense-img img { height: calc(78vh*(198/360)); width: auto; }
-  .compute-img  { position: absolute; top: 16.5%; left: 36.5%; transform: translate(-50%, -50%); z-index: 10; opacity: 0; cursor: no-drop;}
-  .compute-img img { height: calc(78vh*(104/360)); width: auto; }
-  .data-img    { position: absolute; top: 29.2%; left: 17.6%; transform: translate(-50%, -50%); z-index: 10; opacity: 0;}
-  .data-img img   { height: calc(78vh*(120/360)); width: auto; }
-  .academic-img    { position: absolute; top: 20%; right: 14%; transform: translate(-50%, -50%); z-index: 15; opacity: 0;}
-  .academic-img img   { height: calc(78vh*(127/360)); width: auto; }
-  .arena-img    { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; opacity: 0;}
-  .arena-img img  { height: calc(78vh*(134/360)); width: auto; }
-  .lab-img    { position: absolute; top: 75.8%; left: 31.5%; transform: translate(-50%, -50%); z-index: 10; opacity: 0; cursor: no-drop;}
-  .lab-img img  { height: calc(78vh*(135/360)); width: auto; }
+  .ai-img     { position: absolute; top: 62%; left: 12%; transform: translate(-50%, -50%); z-index: 10; }
+  .ai-img img    { height: calc(78vh*(127/360)); width: auto; opacity: 0;}
+  .defense-img { position: absolute; top: 28.5%; right: -3.5%; transform: translate(-50%, -50%);  z-index: 10;  cursor: no-drop;}
+  .defense-img img { height: calc(78vh*(198/360)); width: auto; opacity: 0;}
+  .compute-img  { position: absolute; top: 16.5%; left: 36.5%; transform: translate(-50%, -50%); z-index: 10;  cursor: no-drop;}
+  .compute-img img { height: calc(78vh*(104/360)); width: auto; opacity: 0;}
+  .data-img    { position: absolute; top: 29.2%; left: 17.6%; transform: translate(-50%, -50%); z-index: 10; }
+  .data-img img   { height: calc(78vh*(120/360)); width: auto; opacity: 0;}
+  .academic-img    { position: absolute; top: 20%; right: 14%; transform: translate(-50%, -50%); z-index: 15; }
+  .academic-img img   { height: calc(78vh*(127/360)); width: auto; opacity: 0;}
+  .arena-img    { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; }
+  .arena-img img  { height: calc(78vh*(134/360)); width: auto; opacity: 0;}
+  .lab-img    { position: absolute; top: 75.8%; left: 31.5%; transform: translate(-50%, -50%); z-index: 10;  cursor: no-drop;}
+  .lab-img img  { height: calc(78vh*(135/360)); width: auto; opacity: 0;}
 </style>
