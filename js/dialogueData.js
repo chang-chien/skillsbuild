@@ -426,7 +426,7 @@ export const dialogueMapData = {
       },
       quiz01: {
         text: [
-          "This is a special trial that include previous advanture.",
+          "This is a special trial that include previous adventure.",
           "<b>Spend 10 electricity⚡ to prove your readiness to face the battle ahead.</b>",
         ],
         warning: "If you answer wrong more than one question, you will need to retry the whole quiz.",
@@ -561,7 +561,7 @@ export const dialogueMapData = {
       },
       quiz01: {
         text: [
-          "This is a special trial that include previous advanture.",
+          "This is a special trial that include previous adventure.",
           "<b>Spend 10 electricity⚡ to prove your readiness to face the battle ahead.</b>",
         ],
         warning: "If you answer wrong more than one question, you will need to retry the whole quiz.",
@@ -756,7 +756,7 @@ export const dialogueMapData = {
       },
       quiz05: {
         text: [
-          "Correct! Next, this is a special trial that include previous advanture.",
+          "Correct! Next, this is a special trial that include previous adventure.",
           "<b>Spend 10 electricity⚡ to prove your readiness to face the battle ahead.</b>",
         ],
         warning: "If you answer wrong more than one question, you will need to retry the whole quiz.",
@@ -864,7 +864,7 @@ export const dialogueMapData = {
       },
       quiz01: {
         text: [
-          "This is a special trial that include previous advanture.",
+          "This is a special trial that include previous adventure.",
           "<b>Spend 10 electricity⚡ to prove your readiness to face the battle ahead.</b>",
         ],
         warning: "If you answer wrong more than one question, you will need to retry the whole quiz.",
@@ -969,7 +969,7 @@ export const dialogueMapData = {
       },
       quiz01: {
         text: [
-          "This is a special trial that include previous advanture.",
+          "This is a special trial that include previous adventure.",
           "<b>Spend 10 electricity⚡ to prove your readiness to face the battle ahead.</b>",
         ],
         warning: "If you answer wrong more than one question, you will need to retry the whole quiz.",
