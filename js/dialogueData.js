@@ -875,7 +875,7 @@ export const dialogueMapData = {
       },
       quiz02: {
         text: [
-          "In which step did Ava share that he is careful to follow the company guidelines when storing data for security purposes?"
+          "In which step did Ava share that her is careful to follow the company guidelines when storing data for security purposes?"
         ],
         choices: [
           { label: "Collect", next: 'quiz03', isCorrect: true },
@@ -887,7 +887,7 @@ export const dialogueMapData = {
       },
       quiz03: {
         text: [
-          "In which step did Ava share that he spends most of his time, nearly 80%? ",
+          "In which step did Ava share that her spends most of his time, nearly 80%? ",
         ],
         choices: [
           { label: "Visualize", next: 'quiz04', isCorrect: false },
@@ -899,7 +899,7 @@ export const dialogueMapData = {
       },
       quiz04: {
         text: [
-          "In which step did Ava share he figures out the best way to depict his results in a team presentation?",
+          "In which step did Ava share her figures out the best way to depict his results in a team presentation?",
         ],
         choices: [
           { label: "Visualize", next: 'quiz05', isCorrect: true },
@@ -911,7 +911,7 @@ export const dialogueMapData = {
       },
       quiz05: {
         text: [
-          "In which step did Ava share that he gets excited to investigate and use the right analytical methods to find root causes?",
+          "In which step did Ava share that her gets excited to investigate and use the right analytical methods to find root causes?",
         ],
         choices: [
           { label: "Clean", next: 'village', isCorrect: false },
@@ -919,7 +919,7 @@ export const dialogueMapData = {
           { label: "Analyze", next: 'village', isCorrect: true  },
           { label: "Collect", next: 'village', isCorrect: false }
         ],
-        explanation: "In the <b>Analyze</b> step, Ava shared that he uses problem-solving skills when he analyzes data to analyze trends and find root causes to answer the business question."
+        explanation: "In the <b>Analyze</b> step, Ava shared that her uses problem-solving skills when he analyzes data to analyze trends and find root causes to answer the business question."
       },
       village: {
         text: [
@@ -1043,7 +1043,7 @@ export const dialogueMapData = {
         ],
         choices: [
           { label: 'Back to village', next: 'backToVillage' },
-          { label: 'Go to academic', next: 'goToAcademic' }
+          { label: 'Go to academy', next: 'goToAcademy' }
         ]
       },
     },

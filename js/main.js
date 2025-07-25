@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
     btnDataQuiz.addEventListener('click', loadData);
   }
 
-  const btnAcademicQuiz = document.getElementById('btn-academic-quiz');
-  if (btnAcademicQuiz) {
-    btnAcademicQuiz.addEventListener('click', loadAcademic);
+  const btnAcademyQuiz = document.getElementById('btn-academy-quiz');
+  if (btnAcademyQuiz) {
+    btnAcademyQuiz.addEventListener('click', loadAcademy);
   }
 
   const btnArena = document.getElementById('btn-arena-quiz');
@@ -106,8 +106,8 @@ function loadData() {
 }
 
 // ⚙️ Load the academy quiz scene
-function loadAcademic() {
-  loadComponent('./components/academic.html');
+function loadAcademy() {
+  loadComponent('./components/academy.html');
 
   // Dynamically import the module script (after DOM is updated)
   import('./upgrade.js').then(module => {  

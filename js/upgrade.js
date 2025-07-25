@@ -52,7 +52,7 @@ function applyUpgradeStatus() {
           // Store the selected building in localStorage or URL
           localStorage.setItem('selectedBuilding', key);
           // Redirect to the quiz page
-          const load = await loadComponent(`./components/academic/${key}.html`);
+          const load = await loadComponent(`./components/academy/${key}.html`);
 
           if (load) {
             const upgradeText = document.getElementById('dialogue-text');
