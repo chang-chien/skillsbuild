@@ -50,8 +50,10 @@ function applyUpgradeStatus() {
         // Add click handler to redirect to quiz page
         button.addEventListener('click', async () => {
           // Store the selected building in localStorage or URL
+          console.log(key)
           localStorage.setItem('selectedBuilding', key);
           // Redirect to the quiz page
+          console.log(key)
           const load = await loadComponent(`./components/academy/${key}.html`);
 
           if (load) {
