@@ -56,7 +56,7 @@ export const upgradeMapData = {
                     explanation: "Reinforcement learning is a machine learning model similar to supervised learning, but the algorithm isn’t trained using sample data. The model learns as it goes by using trial and error."
                 },
                 quiz05: {
-                    question: "Reinforcement learning is a machine learning model similar to supervised learning, but the algorithm isn’t trained using sample data. The model learns as it goes by using trial and error.",
+                    question: "Which of the following types of data can be analyzed more quickly by machine learning than by a programmable computer?",
                     options: {
                         option01: "Structured",
                         option02: "Systematic",
