@@ -1,57 +1,26 @@
 <section class="quiz-section">
   <div class="button-grid">
     <!-- Artificial Intelligence -->
-    <button class="leaderboard-card all">
-      <div class="leaderboard-btn">
-        <span class="icon">📦</span>
-        <span>All Resources Leaderboard</span>
-      </div>
-    </button>
-
-    <!-- Artificial Intelligence -->
-    <button class="leaderboard-card ai">
-      <div class="leaderboard-btn">
-        <span class="icon">📄</span>
-        <span>Artificial Intelligence Leaderboard</span>
-      </div>
-    </button>
+    <button class="leaderboard-card ai"><span>AI Center<br>Leaderboard</span></button>
 
     <!-- Data Science -->
-    <button class="leaderboard-card data">
-      <div class="leaderboard-btn">
-        <span class="icon">📊</span>
-        <span>Data Science Leaderboard</span>
-      </div>
-    </button>
+    <button class="leaderboard-card data"><span>Data Center<br>Leaderboard</span></button>
 
     <!-- Cybersecurity -->
-    <button class="leaderboard-card defense">
-      <div class="leaderboard-btn">
-        <span class="icon">🔐</span>
-        <span>Cybersecurity Leaderboard</span>
-      </div>
-    </button>
+    <button class="leaderboard-card defense"><span>Security System<br>Leaderboard</span></button>
 
     <!-- Cloud Computing -->
-    <button class="leaderboard-card compute">
-      <div class="leaderboard-btn">
-        <span class="icon">⚙️</span>
-        <span>Cloud Computing Leaderboard</span>
-      </div>
-    </button>
-
-    <button class="leaderboard-card electricity">
-      <div class="leaderboard-btn">
-        <span class="icon">⚡</span>
-        <span>Electricity Leaderboard</span>
-      </div>
-    </button>
+    <button class="leaderboard-card compute"><span>Cloud Center<br>Leaderboard</span></button>
   </div>
 
-  <div class="leaderboard">
+  <div class="leaderboard-container">
     <div class="leaderboard-header">
       <span class="icon">🏆</span>
-      <span>Leaderboard</span>
+      <span>AI Center Leaderboard</span>
+      <span class="tooltip">
+        <i class="fa fa-question-circle"></i>
+        <span class="label">Sort by level of the buildngs</span>
+      </span>
     </div>
     <div class="player-record-grid">
       <!-- Single Entry -->
@@ -59,61 +28,61 @@
           <span class="player-ranking">🥇</span>
           <img src="https://i.pravatar.cc/40?u=1" alt="avatar" class="user-avatar">
           <span class="user-name">PlayerOne</span>
-          <span class="">1520 📦</span>
+          <span class="">Level 1</span>
       </div>
       <div class="player-record">
           <span class="player-ranking">🥈</span>
           <img src="https://i.pravatar.cc/40?u=1" alt="avatar" class="user-avatar">
           <span class="user-name">PlayerOne</span>
-          <span class="">1520 📦</span>
+          <span class="">Level 1</span>
       </div>
       <div class="player-record">
           <span class="player-ranking">🥉</span>
           <img src="https://i.pravatar.cc/40?u=1" alt="avatar" class="user-avatar">
           <span class="user-name">PlayerOne</span>
-          <span class="">1520 📦</span>
+          <span class="">Level 1</span>
       </div>
       <div class="player-record">
           <span class="player-ranking">#4</span>
           <img src="https://i.pravatar.cc/40?u=1" alt="avatar" class="user-avatar">
           <span class="user-name">PlayerOne</span>
-          <span class="">1520 📦</span>
+          <span class="">Level 1</span>
       </div>
       <div class="player-record">
           <span class="player-ranking">#5</span>
           <img src="https://i.pravatar.cc/40?u=1" alt="avatar" class="user-avatar">
           <span class="user-name">PlayerOne</span>
-          <span class="">1520 📦</span>
+          <span class="">Level 1</span>
       </div>
-      <div class="player-record">
-          <span class="player-ranking">#6</span>
-          <img src="https://i.pravatar.cc/40?u=1" alt="avatar" class="user-avatar">
-          <span class="user-name">PlayerOne</span>
-          <span class="">1520 📦</span>
-      </div>  
+      <div class="player-record user">
+        <span class="player-ranking">#6</span>
+        <img src="https://i.pravatar.cc/40?u=1" alt="avatar" class="user-avatar">
+        <span class="user-name">Me</span>
+        <span class="">Level 1</span>
+      </div> 
       <div class="player-record">
           <span class="player-ranking">#7</span>
           <img src="https://i.pravatar.cc/40?u=1" alt="avatar" class="user-avatar">
           <span class="user-name">PlayerOne</span>
-          <span class="">1520 📦</span>
+          <span class="">Level 1</span>
       </div>  
       <div class="player-record">
           <span class="player-ranking">#8</span>
           <img src="https://i.pravatar.cc/40?u=1" alt="avatar" class="user-avatar">
           <span class="user-name">PlayerOne</span>
-          <span class="">1520 📦</span>
+          <span class="">Level 1</span>
       </div>  
       <div class="player-record">
           <span class="player-ranking">#9</span>
           <img src="https://i.pravatar.cc/40?u=1" alt="avatar" class="user-avatar">
           <span class="user-name">PlayerOne</span>
-          <span class="">152 📦</span>
+          <span class="">Level 1</span>
       </div>  
       <div class="player-record">
           <span class="player-ranking">#10</span>
           <img src="https://i.pravatar.cc/40?u=1" alt="avatar" class="user-avatar">
           <span class="user-name">PlayerOne</span>
-          <span class="">15 📦</span>
+          <span class="">Level 1</span>
       </div>  
     </div>
   </div>
@@ -129,33 +98,35 @@
     background-image: url('./assets/images/villageBG.png'); 
     background-repeat: no-repeat;
     padding: 2rem;
+    gap: 2rem; /* Space between cards */
     box-sizing: border-box;    
     display: flex;
     align-items: center;
-    gap: 2rem; /* Space between cards */
     justify-content: center;
   }
 
   .quiz-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: rgba(255, 255, 255, 0.6); /* 調這裡的透明度淡化 */
-  z-index: 1;
-  pointer-events: none;
-}
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.6); /* 調這裡的透明度淡化 */
+    z-index: 1;
+    pointer-events: none;
+  }
 
   .button-grid {
-  z-index: 10;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
     height: -webkit-fill-available; 
+    gap: 2rem;
     /* width: 100%; */
   }
 
   /* Arena Card Layout */
   .leaderboard-card {
+    z-index: 10;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 1rem;
     padding: 1rem;
@@ -166,26 +137,67 @@
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+    height: -webkit-fill-available;
     box-sizing: border-box;
     transition: transform 0.2s, box-shadow 0.3s;
+    justify-content: center;
   }
 
+  .leaderboard-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  }
+
+  /* Responsive fallback */
+  @media (max-width: 768px) {
+    .leaderboard-card {
+      flex-direction: column;
+    }
+  }
+  
   /* Title Bar */
   .leaderboard-header {
     display: flex;
     align-items: center;
     gap: 1rem;
+    font-size: 1.25rem;
     font-weight: bold;
     text-shadow: 2px 2px 4px black;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     padding-bottom: 0.5rem;
     justify-content: center;
     height: min-content;
-    font-size: 1rem;
   }
 
   .leaderboard-header .icon {
     font-size: 1.25rem;
+  }
+
+  .tooltip {
+    position: relative; /* make label position absolute relative to this */
+    display: inline-block;
+  }
+
+  .tooltip:hover .label {
+    display: block;
+  }
+  
+  .label {
+    display: none; /* hide by default */
+    position: absolute;
+    top: -30px;
+    /* transform: translateX(-50%); */
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 1rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 100;
+  }
+
+  .fa-question-circle:hover .label {
+    display: block;
   }
 
   /* Difficulty Buttons */
@@ -208,18 +220,6 @@
     justify-content: center;
   }
 
-  .leaderboard-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-
-  }
-
-  /* Responsive fallback */
-  @media (max-width: 768px) {
-    .leaderboard-card {
-      flex-direction: column;
-    }
-  }
   .type-title {
     display: flex;
     font-size: 1.25rem;
@@ -232,36 +232,45 @@
     width: 40vw;
   }
 
-  .leaderboard {
-  z-index: 10;
+  .leaderboard-container {
+    flex: 2;
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    /* color: white; */
     padding: 1rem;
     border-radius: 1rem;
-    width: 100%;
-    max-width: 400px;
+    /* width: 100%; */
+    /* max-width: 400px; */
+    width: -webkit-fill-available;
+    max-width: 800px;
+    min-height: 0;
+    height: -webkit-fill-available;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     z-index: 10;
-    height: -webkit-fill-available;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    color: white;
   }
 
   .player-record-grid {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    border-radius: 1rem;
+    gap: 0.5rem;
     justify-content: space-between;
     height: 100%;
+    overflow-y: auto;
   }
 
   .player-record {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    /* justify-content: space-between; */
-    /* margin-bottom: 1rem; */
+    padding: 0.5rem;
+  }
+
+  .user{
+    background-color: rgba(255, 255, 255, 0.3);
   }
 
   .player-ranking {
@@ -281,5 +290,52 @@
     /* font-weight: bold; */
     /* color: #0f62fe; blue color */
     flex-grow: 1; /* Allow name to take available space */
+  }
+
+  .leaderboard-card {
+    position: relative;
+    padding: 2rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: 20px solid transparent;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.3s;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 5px black;
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  .leaderboard-card span {
+    position: relative;
+    z-index: 2;
+    padding-left: 2rem;
+  }
+
+  /* Hover effect */
+  .leaderboard-card:hover {
+    transform: scale(1.1);
+  }
+
+  /* Specific building backgrounds */
+  .leaderboard-card.compute {
+    background-image: url('./assets/images/buildings/computeL1.png');
+  }
+
+  .leaderboard-card.data {
+    background-image: url('./assets/images/buildings/dataL1.png');
+  }
+
+  .leaderboard-card.defense {
+    background-image: url('./assets/images/buildings/defenseL1.png');
+  }
+
+  .leaderboard-card.ai {
+    background-image: url('./assets/images/buildings/aiL1.png');
   }
 </style>
