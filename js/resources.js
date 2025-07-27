@@ -1,10 +1,10 @@
 // Initialize resources
 localStorage.setItem("resources", JSON.stringify({
-  rawData: 10,
-  dataPacket: 50,
+  rawData: 0,
+  dataPacket: 0,
   securityToken: 0,
   processingUnit: 0,
-  electricity: 10
+  electricity: 50
 }));
 
 export function refreshResourcesUI() {

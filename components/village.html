@@ -6,32 +6,32 @@
 
   <div class="building defense-img" id="defense" data-title="Security System">
     <img src="./assets/images/buildings/defenseL1.png" alt="Security System Level 1">
-    <span class="label">Security System<br>Coming Soon</span>
+    <span class="label building">Security System<br>Coming Soon</span>
   </div>
 
   <div class="building compute-img" id="compute" data-title="Cloud Center">
     <img src="./assets/images/buildings/computeL1.png" alt="Cloud Center Level 1">
-    <span class="label">Cloud Center<br>Coming Soon</span>
+    <span class="label building">Cloud Center<br>Coming Soon</span>
   </div>
 
   <div class="building data-img" id="data" data-title="Data Center" data-type="dialogue">
     <img src="./assets/images/buildings/dataL1.png" alt="Data Center Level 1">
-    <span class="label">Data Center: Level 1</span>
+    <span class="label building">Data Center: Level 1</span>
   </div>
 
   <div class="building academy-img" id="academy" data-title="Academy" data-type="upgrade">
     <img src="./assets/images/buildings/academy.png" alt="Academy Level 1">
-    <span class="label">Academy</span>
+    <span class="label building">Academy</span>
   </div>
 
   <div class="building arena-img" id="arena" data-title="Arena" data-type="contest">
     <img src="./assets/images/buildings/arena.png" alt="Arena Level 1">
-    <span class="label">Arena</span>
+    <span class="label building">Arena</span>
   </div>
 
   <div class="building lab-img" id="lab" data-title="Arena">
     <img src="./assets/images/buildings/aiLabL1.png" alt="AI Lab Level 1">
-    <span class="label">AI Lab<br>Coming Soon</span>
+    <span class="label building">AI Lab<br>Coming Soon</span>
   </div>
 </section>
 
@@ -59,20 +59,11 @@
     transition: transform 0.2s, box-shadow 0.2s;
   }
 
-  .label {
-    display: none;
-    position: absolute;
+  .label.building {
+    top: auto;
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0,0,0,0.7);
-    color: #fff;
-    padding: 4px 8px;
-    font-size: 1rem;
-    border-radius: 4px;
-    white-space: nowrap;
-    pointer-events: none;
-    z-index: 20;
   }
   
   .building:hover .label {
