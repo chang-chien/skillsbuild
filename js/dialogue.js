@@ -40,9 +40,9 @@ function applyUpgradeStatus() {
     const button = document.querySelector(`.upgrade-button.${className}`);
 
     // const choiceBox = document.querySelector('.choice-box');
-    const building = 'dataCenter';
+    const building = 'aiCenter';
     // TODO: change secton to section01 during the usability test
-    const section = 'section06';
+    const section = 'section01';
 
     if (button) {
       if (isEnabled) {
