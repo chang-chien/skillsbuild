@@ -22,7 +22,7 @@ export class UpgradeEngine {
     const keyPoints = this.upgradeMap[this.building][this.level].keyPoints;
 
     // Clear any previous content
-    this.upgradeText.innerHTML = "";
+    // this.upgradeText.innerHTML = "";
 
     let count = 0;
     // Append each point to the upgrade text container

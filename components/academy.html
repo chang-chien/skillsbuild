@@ -1,10 +1,10 @@
 <section class="quiz-section">
   <div class="quiz-container button-grid">
     <!-- Each button wraps its text in a <span> for correct z-index layering -->
-    <button class="upgrade-button ai"><span>Upgrade<br> AI Center</span></button>
-    <button class="upgrade-button data"><span>Upgrade<br> Data Center</span></button>
-    <button class="upgrade-button defense"><span>Upgrade<br> Security System</span></button>
-    <button class="upgrade-button compute"><span>Upgrade<br> Cloud Center</span></button>
+    <button class="upgrade-button ai">AI Course</button>
+    <button class="upgrade-button data">Data Course</button>
+    <button class="upgrade-button defense">Cybersecurity Course</button>
+    <button class="upgrade-button compute">Cloud Course</button>
   </div>
 </section>
 
@@ -44,41 +44,41 @@
     border-radius: 1rem;
   }
 
-.upgrade-button {
-  position: relative;
-  padding: 2rem;
-  font-size: 1.25rem;
-  font-weight: bold;
-  border: 20px solid transparent;
-  border-radius: 1rem;
-  cursor: pointer;
-  transition: transform 0.2s, filter 0.3s;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-shadow: 2px 2px 5px black;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  z-index: 0;
-}
+  .upgrade-button {
+    position: relative;
+    padding: 2rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: 20px solid transparent;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.3s;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 5px black;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: 0;
+  }
 
-/* Text stays above overlay */
-.upgrade-button span {
-  position: relative;
-  z-index: 2;
-}
+  /* Text stays above overlay */
+  .upgrade-button span {
+    position: relative;
+    z-index: 2;
+  }
 
-/* Hover effect */
-.upgrade-button:hover {
-  transform: scale(1.1);
-}
+  /* Hover effect */
+  .upgrade-button:hover {
+    transform: scale(1.1);
+  }
 
-.upgrade-button.disabled {
-  filter: brightness(0.5);
-  cursor: not-allowed;
-  pointer-events: none;
-}
+  .upgrade-button.disabled {
+    filter: brightness(0.5);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 
 
   /* Specific building backgrounds */

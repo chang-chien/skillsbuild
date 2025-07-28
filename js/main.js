@@ -72,11 +72,12 @@ function attachBuildingListeners() {
 
       const buildingId = building.id; // e.g., "compute", "data", etc.
       const buildingType = building.getAttribute("data-type"); // e.g., "upgrade", "contest", "info"
-      // const buildingType = building.data-type; // e.g., "upgrade", "contest", "info"
 
       let load = null;
       if (buildingType === 'dialogue') {
-        load = await loadComponent(`./components/questions/${buildingId}.html`);
+        load = await loadComponent(`./components/${buildingId}.html`);
+      } else if (buildingType === 'building') {
+        load = await loadComponent(`./components/${buildingType}/${buildingId}.html`);
       } else if (buildingType === 'contest' || buildingType === 'upgrade') {
         load = await loadComponent(`./components/${buildingId}.html`);
       }

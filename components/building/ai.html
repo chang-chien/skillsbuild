@@ -1,0 +1,231 @@
+<section class="quiz-section">
+  <div class="building-container">
+    <div class="building-header">
+      <span class="icon">💻</span>
+      <span>AI Center</span>
+      <span class="tooltip">
+        <i class="fa fa-question-circle"></i>
+        <span class="label">Read the latest building to earn resources 📦</span>
+    </div>
+
+    <div class="npc-container">
+      <div class="npc-panel">
+        <img src="./assets/images/avatar/npc_academy_mentor.png" alt="Elder Henry">
+        <p class="npc-name">Elder Henry</p>
+      </div>      
+      <p class="npc-dialogue">Welcome, Tribal Leader. I am Elder Henry, guardian of the AI Center. <br><br>In this building, you can strengthen our AI, revisit the teachings that shape our tribe, or test your mastery once more. Choose your path wisely—your actions below will guide our future.</p>
+    </div>
+
+    <div class="building-grid">
+      <!-- Single Entry -->
+      <button class="building-button ai upgrade-button">
+        <p>Upgrade AI Center</p>
+        <p class="description">Aceept the final trail from Elder Henry<br>And spend 50 📄 to upgrade your bulding</p>
+      </button>
+      <button class="building-button ai review-course-button">
+        <p>Review AI Course</p>
+        <p class="description">Revisit the AI course to strengthen your knowledge</p>
+      </button>
+      <button class="building-button ai review-wrong-button">
+        <p>Review Wrong Questions</p>
+        <p class="description">Revisit the questions you answered incorrectly</p>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .quiz-section {
+    position: relative;
+    height: 100%;
+    aspect-ratio: 16/9;
+    background-size: auto 100%;
+    background-position: center;
+    background-image: url('./assets/images/villageBG.png'); 
+    background-repeat: no-repeat;
+    padding: 2rem;
+    gap: 2rem; /* Space between cards */
+    box-sizing: border-box;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .quiz-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.6); /* 調這裡的透明度淡化 */
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .building-container {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: -webkit-fill-available;
+    max-width: 800px;
+    min-height: 0;
+    height: 80%; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Title Bar */
+  .building-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 0.5rem;
+    justify-content: center;
+    height: min-content;
+    color: white;
+  }
+
+  .building-header .icon {
+    font-size: 1.25rem;
+  }
+
+  .tooltip {
+    position: relative; /* make label position absolute relative to this */
+    display: inline-block;
+  }
+
+  .tooltip:hover .label {
+    display: block;
+  }
+
+  .label {
+    display: none; /* hide by default */
+    position: absolute;
+    top: -30px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 1rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 100;
+  }
+
+  .fa-question-circle:hover .label {
+    display: block;
+  }
+
+  .npc-container {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 1.5rem;
+    color: white;
+    text-align: center;
+  }
+
+  .npc-panel {
+    /* flex: 1; */
+    /* text-align: center; */
+    padding-left: 1rem;
+    /* padding-top: 2rem; */
+  }
+
+  .npc-panel img {
+    /* height: 100%; */
+    max-height: 150px;
+  }
+
+  .npc-name {
+    font-weight: bold;
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .npc-dialogue {
+    font-size: 1.2rem;
+    color: #fff;
+    /* margin-top: 0.5rem; */
+    font-style: italic;
+    text-align: left;
+  }
+
+  .building-grid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* height: 100%; */
+    gap: 1rem;
+    overflow-y: auto;
+  }
+
+  .building-button {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    padding: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: 5px solid transparent;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.3s;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 5px black;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: 0;
+    align-items: center;
+  }
+
+  /* Text stays above overlay */
+  .building-button span {
+    /* gap: 1rem; */
+    /* display: flex; */
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Hover effect */
+  .building-button:hover {
+    /* transform: scale(1.1); */
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .building-button.disabled {
+    filter: brightness(0.5);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .button-avatar {
+    height: 60px;
+    object-fit: cover;
+  }
+
+  .button-info {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .description {
+    font-size: 1rem; /* Smaller font size */
+    font-weight: 400;
+    color: white;
+    text-align: left;
+  }
+</style>

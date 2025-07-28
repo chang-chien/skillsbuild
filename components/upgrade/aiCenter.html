@@ -2,19 +2,18 @@
   <div class="quiz-container">
     <!-- Left: NPC Image -->
     <div class="npc-panel">
-      <img src="./assets/images/avatar/npc_data_mentor.png" alt="Elder Ava">
-      <p class="npc-name">Elder Ava</p>
+      <img src="./assets/images/avatar/npc_academy_mentor.png" alt="Elder Henry">
+      <p class="npc-name">Elder Henry</p>
     </div>
 
     <!-- Right: Dialogue + Choices -->
     <div class="dialogue-panel">
       <div class="dialogue-box" id="dialogue-text">
-        <!-- <p><strong>Elder Ava:</strong> Tribal Leader, you’ve arrived! The fate of our village rests not on brute strength, but on wisdom that hidden in something the ancients called… data. Before you lead warriors into strategy or trade, you must first learn to lead with knowledge. Will you heed this duty?</p> -->
+        <p><strong>Elder Henry: <i>Nice choice! Here are some keypoints for your trail:</i></strong></p>
       </div>
 
       <div class="choice-box">
-        <!-- <button class="choice" data-next="section01_intro">I’m ready. Tell me what must be done.</button>
-        <button class="choice" data-next="section01_guide">Skip the ritual, just tell me where to click.</button> -->
+        <!-- <button class="choice">Let's rock!</button> -->
       </div>
     </div>
   </div>
@@ -35,7 +34,7 @@
     align-items: baseline;   /* Vertically upper */
     justify-content: center; /* Horizontally center */
   }
-
+  
   .quiz-section::before {
     content: '';
     position: absolute;
@@ -53,7 +52,7 @@
     box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     max-width: 900px;
     width: 100%;
-    max-height: 100%;        /* Prevent overflow */
+    height: 100%;
     overflow: hidden;
   }
 
@@ -111,15 +110,15 @@
     padding-left: 1rem;
     padding-right: 1rem;
     min-height: 100px;
+    height: 100%;
     margin-bottom: 1rem;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
   }
 
   .choice-box {
-    display: flex;
+    display: grid;
     gap: 1rem;
-    justify-content: flex-end;
   }
 
   .choice {
