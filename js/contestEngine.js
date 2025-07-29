@@ -71,7 +71,7 @@ export class ContestEngine {
   }
 
   loadNextQuiz() {
-    if (this.currentQuizIndex < this.questionOrder.length) {
+    if (this.currentQuizIndex < 5) {
       this.updateDialogue(this.questionOrder[this.currentQuizIndex]);
     } else {
       this.contestText.innerHTML = `<p>🎉 You've completed all the questions!</p>`;

@@ -16,6 +16,7 @@ function initializeAICenterUpgrade() {
     };
     localStorage.setItem("aiCenterUpgrade", JSON.stringify(defaultUpgradeState));
   }
+  
 }
 
 // Update button states based on localStorage
@@ -24,6 +25,7 @@ function applyAICenterStatus() {
 
   // --- Upgrade Button ---
   const upgradeBtn = document.querySelector(`.upgrade-button.${buildingClass}`);
+  console.log("Upgrade Button:", upgradeBtn, "Status:", aiCenterStatus.upgraded);
   if (upgradeBtn) {
     if (aiCenterStatus.upgraded) {
       upgradeBtn.classList.remove("disabled");

@@ -31,7 +31,7 @@ export class DialogueEngine {
     lines.forEach(line => {
       this.dialogueText.innerHTML += `<p class="npc-response"><strong>${speaker}:</strong> ${line}</p>`;
     });
-    // this.dialogueText.scrollTop = this.dialogueText.scrollHeight;
+    this.dialogueText.scrollTop = this.dialogueText.scrollHeight;
   }
 
   appendPlayerResponse(text) {
@@ -173,14 +173,14 @@ export class DialogueEngine {
               this.quizFailed = false;
             });
             this.choiceBox.appendChild(retryBtn);
-            // this.dialogueText.scrollTop = this.dialogueText.scrollHeight;
+            this.dialogueText.scrollTop = this.dialogueText.scrollHeight;
             return;
           }
           this.updateDialogue(choice.next, explanation, isCorrect);
         }
       });
 
-      // this.dialogueText.scrollTop = this.dialogueText.scrollHeight;
+      this.dialogueText.scrollTop = this.dialogueText.scrollHeight;
     });
   };
 

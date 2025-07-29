@@ -1107,7 +1107,7 @@ export const dialogueMapData = {
       },
     },
     },
-  AiCenter: {
+  aiCenter: {
     section01: {
       title: 'Getting Started with Artificial Intelligence',
       sectionName: 'AI Center Section 01: What is AI?',
