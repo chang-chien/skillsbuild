@@ -1,7 +1,8 @@
 import { refreshResourcesUI } from './resources.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadVillage(); // Load village by default
+  loadTutorial(); // Load village by default
+  // loadVillage(); // Load village by default
 
   refreshResourcesUI();
 
@@ -49,6 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+function loadTutorial() {
+  loadComponent('./components/tutorial.html', 'game-container', attachBuildingListeners);
+}
 
 // 🧠 Extract village logic into reusable function
 function loadVillage() {
