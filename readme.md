@@ -1,5 +1,5 @@
 # Project title
-Waraick Business School External Dissertation
+Warwick Business School External Dissertation
 
 IBM SkillsBuild Platform Innovation - Strategy Game Learning Experience
 

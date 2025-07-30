@@ -5,34 +5,34 @@
       <span>Insight Ledger</span>
       <span class="tooltip">
         <i class="fa fa-question-circle"></i>
-        <span class="label">Write insights to earn electricity ⚡</span>
+        <span class="label tips">Write insights to earn electricity ⚡</span>
       </span>
     </div>
     <div class="insight-grid">
       <!-- Single Entry -->
       <div class="insight">
           <span class="question" id="ai_module01_part02">How would you describe what AI does?</span>
-          <span class="reward">10 ⚡</span>
+          <span class="reward">+10 ⚡</span>
           <button class="insight-btn">Write something</button>
       </div>
       <div class="insight">
           <span class="question" id="ai_module04_part03">If ML offers only probabilities, who makes the final decision?</span>
-          <span class="reward">10 ⚡</span>
+          <span class="reward">+10 ⚡</span>
           <button class="insight-btn">Write something</button>
       </div>
       <div class="insight">
           <span class="question" id="ai_module06_part02_q1">How have you experienced Narrow AI in your life?</span>
-          <span class="reward">10 ⚡</span>
+          <span class="reward">+10 ⚡</span>
           <button class="insight-btn">Write something</button>
       </div>
       <div class="insight">
           <span class="question" id="ai_module06_part02_q2">How have you experienced Broad AI in your life?</span>
-          <span class="reward">10 ⚡</span>
+          <span class="reward">+10 ⚡</span>
           <button class="insight-btn">Write something</button>
       </div>
       <div class="insight">
           <span class="question" id="ai_module06_part02_q3">How do you expect to experience General AI in your life?</span>
-          <span class="reward">10 ⚡</span>
+          <span class="reward">+10 ⚡</span>
           <button class="insight-btn">Write something</button>
       </div>
     </div>
@@ -109,7 +109,7 @@
     display: block;
   }
 
-  .label {
+  .label.tips {
     display: none; /* hide by default */
     position: absolute;
     top: -30px;
@@ -139,7 +139,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 0.5rem;
     padding: 0.5rem;
   }
@@ -154,7 +154,7 @@
   .reward {
     font-size: 0.875rem; /* Smaller font size */
     color: black; 
-    width: 40px; /* Fixed width for reward */
+    width: 50px; /* Fixed width for reward */
     text-shadow: 1px 1px 15px black;
   }
 

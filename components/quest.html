@@ -5,7 +5,7 @@
       <span>Main Quest</span>
       <span class="tooltip">
         <i class="fa fa-question-circle"></i>
-        <span class="label">Finish the quest to earn electricity ⚡</span>
+        <span class="label tips">Finish the quest to earn electricity ⚡</span>
       </span>
     </div>
     <div class="quest-grid">
@@ -13,19 +13,19 @@
       <div class="quest">
           <span class="description">Finish 3 AI training</span>
           <span class="progress">0/3</span>
-          <span class="reward">10 ⚡</span>
+          <span class="reward">+10 ⚡</span>
           <button class="quest-btn">Go to quest</button>
       </div>
       <div class="quest">
           <span class="description">Finish 1 Arena knowledge contest</span>
           <span class="progress">0/1</span>
-          <span class="reward">10 ⚡</span>
+          <span class="reward">+10 ⚡</span>
           <button class="quest-btn">Go to quest</button>
       </div>
       <div class="quest">
           <span class="description">Upgrade AI center at Academy</span>
           <span class="progress">0/1</span>
-          <span class="reward">10 ⚡</span>
+          <span class="reward">+10 ⚡</span>
           <button class="quest-btn">Go to quest</button>
       </div>
     </div>
@@ -36,7 +36,7 @@
       <span>Side Quest</span>
       <span class="tooltip">
         <i class="fa fa-question-circle"></i>
-        <span class="label">Finish the quest to earn electricity ⚡</span>
+        <span class="label tips">Finish the quest to earn electricity ⚡</span>
       </span>
     </div>
     <div class="quest-grid">
@@ -44,31 +44,31 @@
       <div class="quest">
           <span class="description">Change your name at Profile</span>
           <span class="progress">0/1</span>
-          <span class="reward">10 ⚡</span>
+          <span class="reward">+10 ⚡</span>
           <button class="quest-btn">Go to quest</button>
       </div>
       <div class="quest">
           <span class="description">Read 3 News</span>
           <span class="progress">0/3</span>
-          <span class="reward">10 ⚡</span>
+          <span class="reward">+10 ⚡</span>
           <button class="quest-btn">Go to quest</button>
       </div>
       <div class="quest">
           <span class="description">Finish 2 Insight Ledger</span>
           <span class="progress">0/2</span>
-          <span class="reward">10 ⚡</span>
+          <span class="reward">+10 ⚡</span>
           <button class="quest-btn">Go to quest</button>
       </div>
       <div class="quest">
           <span class="description">Earn 30 electricity ⚡</span>
           <span class="progress">0/30</span>
-          <span class="reward">10 ⚡</span>
+          <span class="reward">+10 ⚡</span>
           <button class="quest-btn">Go to quest</button>
       </div>
       <div class="quest">
           <span class="description">Earn 30 raw data 📄</span>
           <span class="progress">0/30</span>
-          <span class="reward">10 ⚡</span>
+          <span class="reward">+10 ⚡</span>
           <button class="quest-btn">Go to quest</button>
       </div>
     </div>
@@ -145,7 +145,7 @@
     display: block;
   }
 
-  .label {
+  .label.tips {
     display: none; /* hide by default */
     position: absolute;
     top: -30px;
@@ -175,7 +175,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 0.5rem;
     padding: 0.5rem;
   }
@@ -203,7 +203,7 @@
   .reward {
     font-size: 0.875rem; /* Smaller font size */
     color: black; 
-    width: 40px; /* Fixed width for reward */
+    width: 50px; /* Fixed width for reward */
     text-shadow: 1px 1px 15px black;
   }
 
