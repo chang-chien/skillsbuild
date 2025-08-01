@@ -1,0 +1,131 @@
+<section class="quiz-section">
+  <div class="building-container">
+    <div class="npc-container">
+      <div class="npc-panel">
+        <img src="./assets/images/avatar/npc_terry.png" alt="Elder Terry">
+        <p class="npc-name">Elder Terry</p>
+      </div>      
+      <p class="npc-dialogue">
+        You have trained well, tribal leader.<br>
+        The tribe has watched your rise with pride.<br>
+        Now, the time has come. You are ready to lead.<br><br>
+        Here, these are your starter resources: raw data 📄 and electricity ⚡.<br>
+        Use them wisely. Build, defend, and conquer.<br><br>
+        May your name be etched in the stones of our ancestors.<br>
+        Go, Tribal Leader. The village awaits your command.
+      </p>
+    </div>
+    <div class="button-group">
+      <button class="back-step-btn" id="tutorial_04_back">
+        <span class="label">Back</span>
+        <span class="icon">⬅️</span>
+      </button>
+      <button class="next-step-btn" id="tutorial_04_next">
+        <span class="label">View my Village</span>
+        <span class="icon">🛖</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .quiz-section {
+    position: relative;
+    height: 100%;
+    aspect-ratio: 16/9;
+    background-size: auto 100%;
+    background-position: center;
+    background-image: url('./assets/images/villageBG.png'); 
+    background-repeat: no-repeat;
+    padding: 2rem;
+    gap: 2rem; /* Space between cards */
+    box-sizing: border-box;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .quiz-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.6); /* 調這裡的透明度淡化 */
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .building-container {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: -webkit-fill-available;
+    max-width: 800px;
+    min-height: 0;
+    height: 80%; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .npc-container {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 1.5rem;
+    color: white;
+    text-align: center;
+  }
+
+  .npc-panel {
+    /* flex: 1; */
+    /* text-align: center; */
+    padding-left: 1rem;
+    /* padding-top: 2rem; */
+  }
+
+  .npc-panel img {
+    /* height: 100%; */
+    max-height: 150px;
+  }
+
+  .npc-name {
+    font-weight: bold;
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .npc-dialogue {
+    font-size: 1.2rem;
+    color: #fff;
+    /* margin-top: 0.5rem; */
+    font-style: italic;
+    text-align: left;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  button {
+    /* flex: 1; */
+    padding: 0.8rem;
+    font-size: 15px;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background-color: #ddd;
+  }
+</style>

@@ -1,3 +1,5 @@
+import { loadVillage } from './main.js';
+
 export class UpgradeEngine {
   constructor(upgradeMap, upgradeTextEl, choiceBoxEl, building = 'aiCenter', level = 'level01') {
     this.upgradeMap = upgradeMap;
@@ -85,9 +87,6 @@ export class UpgradeEngine {
     });
   }
 
-  loadVillagePage() {
-    window.location.href = 'index.html';
-  }
   loadNextQuiz() {
     console.log(this.currentQuizIndex);
 
@@ -103,7 +102,7 @@ export class UpgradeEngine {
       const backBtn = document.createElement("button");
       backBtn.innerText = "Back to village";
       backBtn.classList.add("choice");
-      backBtn.onclick = () => this.loadVillagePage();
+      backBtn.onclick = () => loadVillage();
       this.choiceBox.appendChild(backBtn);
       // Optional: trigger rewards, continue level, etc.
     }

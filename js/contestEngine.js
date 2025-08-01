@@ -1,3 +1,5 @@
+import { loadVillage } from './main.js';
+
 export class ContestEngine {
   constructor(contestMap, contestTextEl, choiceBoxEl, type = 'ai') {
     this.contestMap = contestMap;
@@ -66,10 +68,6 @@ export class ContestEngine {
     });
   }
 
-  loadVillagePage() {
-    window.location.href = 'index.html';
-  }
-
   loadNextQuiz() {
     if (this.currentQuizIndex < 5) {
       this.updateDialogue(this.questionOrder[this.currentQuizIndex]);
@@ -80,7 +78,7 @@ export class ContestEngine {
       const backBtn = document.createElement("button");
       backBtn.innerText = "Back to village";
       backBtn.classList.add("option");
-      backBtn.onclick = () => this.loadVillagePage();
+      backBtn.onclick = () => loadVillage();
       this.choiceBox.appendChild(backBtn);
       // Optional: trigger rewards, continue level, etc.
     }

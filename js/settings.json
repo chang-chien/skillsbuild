@@ -1,0 +1,22 @@
+{
+  "player-name": "Player",
+  "ai-center-level": 1,
+  "resources": {
+    "rawData": 0,
+    "dataPacket": 0,
+    "securityToken": 0,
+    "processingUnit": 0,
+    "electricity": 0
+  },
+  "buildingUpgrade": {
+    "aiCenter": true,
+    "dataCenter": false,
+    "defenceSystem": false,
+    "computeNode": false
+  },
+  "aiCenterUpgrade": {
+    "upgraded": true,
+    "reviewedCourse": false,
+    "reviewedWrong": false
+  }
+}

@@ -1,4 +1,6 @@
+import { Storage } from './resources.js';
 import { refreshResourcesUI } from './resources.js';
+import { loadVillage } from './main.js';
 
 const buildingToResource = {
   electricPlant: 'electricity',
@@ -20,7 +22,7 @@ export class DialogueEngine {
     this.incorrectCount = 0;
     this.quizFailed = false;
     // electricity, rawData, dataPacket, securityToken, processingUnit
-    this.resources = JSON.parse(localStorage.getItem("resources"));
+    this.resources = Storage.get("resources");
   }
 
   start() {
@@ -58,7 +60,7 @@ export class DialogueEngine {
 
   updateResources(type, amount) {
     this.resources[type] += amount;
-    localStorage.setItem('resources', JSON.stringify(this.resources));
+    Storage.update("resources", this.resources);
     // Optionally display it on screen or store it in localStorage
     refreshResourcesUI(); 
   }
@@ -118,7 +120,7 @@ export class DialogueEngine {
         if (choice.skipTo) {
           this.showSkippedPath(stateKey, choice.skipTo);
         } else if (choice.next === 'backToVillage') {
-          this.loadVillagePage();
+          loadVillage();
         } else if (choice.next === 'nextSection') {
 
           // Update to the next section (you can customize how to determine the next section)
@@ -145,7 +147,7 @@ export class DialogueEngine {
             retryBtn.classList.add('choice');
             retryBtn.textContent = "Back to Village";
             retryBtn.addEventListener('click', () => {
-              this.loadVillagePage();
+              loadVillage();
             });
             this.choiceBox.appendChild(retryBtn);
             return;
@@ -219,7 +221,7 @@ export class DialogueEngine {
       btn.addEventListener('click', () => {
         this.appendPlayerResponse(choice.label);
         if (choice.next === 'backToVillage') {
-          this.loadVillagePage();
+          loadVillage();
         } else {
 
           // check if need to spend electricity
@@ -233,7 +235,7 @@ export class DialogueEngine {
             retryBtn.classList.add('choice');
             retryBtn.textContent = "Back to Village";
             retryBtn.addEventListener('click', () => {
-              this.loadVillagePage();
+              loadVillage();
             });
             this.choiceBox.appendChild(retryBtn);
             return;
@@ -250,9 +252,5 @@ export class DialogueEngine {
     });
 
     this.dialogueText.scrollTop = this.dialogueText.scrollHeight;
-  }
-
-  loadVillagePage() {
-    window.location.href = 'index.html';
   }
 }

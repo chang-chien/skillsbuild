@@ -1,7 +1,9 @@
+import { bindTutorialEvents } from './tutorial.js';
+import { Storage } from './resources.js';
 import { refreshResourcesUI } from './resources.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadTutorial(); // Load village by default
+  loadTutorial(); // Load tutorial by default
   // loadVillage(); // Load village by default
 
   refreshResourcesUI();
@@ -51,12 +53,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-function loadTutorial() {
-  loadComponent('./components/tutorial.html', 'game-container', attachBuildingListeners);
+async function loadTutorial() {
+      let load = null;
+  load = await loadComponent('./components/tutorial/tutorial.html', 'game-container');
+
+  if (load) {
+    // Dynamically import the module script (after DOM is updated)
+    bindTutorialEvents();
+    // .then(module => {
+    //   if (module && typeof module.init === 'function') {
+    //     module.init();
+    //   }
+    // });        
+  }
 }
 
 // 🧠 Extract village logic into reusable function
-function loadVillage() {
+export function loadVillage() {
   loadComponent('./components/village.html', 'game-container', attachBuildingListeners);
 }
 

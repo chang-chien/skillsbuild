@@ -1,0 +1,138 @@
+<section class="village-screen">
+    <div class="tutorial-container">
+        <div class="tutorial-progress">
+            1/3
+        </div>
+        <div class="instructions">
+            <img src="./assets/images/tutorial/tutorial01.png" alt="Earn resourses in Academy">
+
+            <div class="step">
+                <div class="step-header">Academy</div>
+                <div class="step-description">Take courses in academic to learn knowledge and earn resources 📦 <br><br>(Sometimes you need to spend electricity ⚡ to finish the course)</div>
+            </div>
+        </div>
+        <div class="button-group">
+          <button class="back-step-btn" id="tutorial_01_back">
+              <span class="label">Back</span>
+              <span class="icon">⬅️</span>
+          </button>
+          <button class="next-step-btn" id="tutorial_01_next">
+              <span class="label">Next</span>
+              <span class="icon">➡️</span>
+          </button>
+        </div>
+    </div>
+</section>
+
+<style>
+  .village-screen {
+    position: relative;
+    height: 100%;
+    aspect-ratio: 16/9;
+    background-size: auto 100%;
+    background-position: center;
+    background-image: url('./assets/images/villageBG.png'); 
+    background-repeat: no-repeat;
+    padding: 2rem;
+    gap: 2rem; 
+    box-sizing: border-box;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .village-screen::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .tutorial-container {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 3rem;
+    border-radius: 1rem;
+    width: -webkit-fill-available;
+    max-width: 800px;
+    min-height: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .tutorial-progress {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .instructions {
+    /* flex: 1; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+
+  .step {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    flex: 1; /* Allow steps to grow equally */
+    width: 30%;
+    padding: 2rem;
+  }
+
+  img {
+    width: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .step-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #fff;
+  }
+
+  .step-description {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #fff;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  button {
+    /* flex: 1; */
+    padding: 0.8rem;
+    font-size: 15px;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background-color: #ddd;
+  }
+</style>

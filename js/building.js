@@ -1,4 +1,6 @@
 import { loadComponent } from './main.js';
+import { Storage } from './resources.js';
+import { refreshResourcesUI } from './resources.js';
 import { UpgradeEngine } from './upgradeEngine.js';
 
 let upgradeEngine = null;
@@ -72,9 +74,15 @@ function applyAICenterStatus() {
 
 // Handles upgrade button click
 async function handleUpgradeClick() {
-  localStorage.setItem('selectedBuilding', buildingKey);
+  // localStorage.setItem('selectedBuilding', buildingKey);
   const load = await loadComponent(`./components/upgrade/${buildingKey}.html`);
   if (load) {
+    let rawData = Storage.get("resources").rawData;
+    console.log(Storage.get("resources"));
+    rawData = rawData - 50;
+    Storage.update("resources", { rawData: rawData });
+    refreshResourcesUI();
+
     const upgradeText = document.getElementById('dialogue-text');
     const choiceBox = document.querySelector('.choice-box');
 

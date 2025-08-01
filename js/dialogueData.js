@@ -1155,7 +1155,7 @@ export const dialogueMapData = {
       },
       quiz01_retry: {
         text: [
-          'Not quite. The spirits say the true strength of AI is not in replacing minds, but in recognizing patterns.',
+          '❌ Not quite. The spirits say the true strength of AI is not in replacing minds, but in recognizing patterns.',
           'Try again: What is the core function of AI?'
         ],
         choices: [
@@ -1167,6 +1167,7 @@ export const dialogueMapData = {
       },
       quiz02: {
         text: [
+          '✅ Correct! ',
           'Next question from the Council: What sets machine minds (AI) apart from the path of Augmented Wisdom?',
           'Choose the truest path.'
         ],
@@ -1179,7 +1180,7 @@ export const dialogueMapData = {
       },
       quiz02_retry: {
         text: [
-          'Not the right path. AI aims to act alone, while Augmented Wisdom is a guiding torch that supports human choice.',
+          '❌ Not the right path. AI aims to act alone, while Augmented Wisdom is a guiding torch that supports human choice.',
           'Try again: What separates AI from Augmented Intelligence?'
         ],
         choices: [
@@ -1191,6 +1192,7 @@ export const dialogueMapData = {
       },
       quiz03: {
         text: [
+          '✅ Correct! ',
           'Final riddle of the Ancients: Where do humans still hold strong over the machines?',
           'A question of spirit and mind.'
         ],
@@ -1203,7 +1205,7 @@ export const dialogueMapData = {
       },
       quiz03_retry: {
         text: [
-          'Even the cleverest machines lack emotion and vision.',
+          '❌ ven the cleverest machines lack emotion and vision.',
           'Try again: Where do humans shine most?'
         ],
         choices: [
@@ -1215,6 +1217,7 @@ export const dialogueMapData = {
       },
       village: {
         text: [
+          '✅ Correct!',
           'Well done, Tribal Leader. You’ve passed the Trial of the Mind!',
           'Your insight earns the tribe 10 Raw Data 📄.',
           'Will you return to the village or seek the next ancient secret?'
