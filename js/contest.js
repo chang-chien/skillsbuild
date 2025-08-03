@@ -1,4 +1,6 @@
 import { loadComponent } from './main.js';
+import { Storage } from './resources.js';
+import { refreshResourcesUI } from './resources.js';
 import { ContestEngine } from './contestEngine.js';
 
 let contestEngine = null;
@@ -16,31 +18,10 @@ const resourceMap = {
   compute: "processingUnit"
 };
 
-// Initialize resources
-localStorage.setItem("contestAvailability", JSON.stringify({
-      ai:    { bronze: false, silver: false, gold: false },
-      data:  { bronze: false, silver: false, gold: false },
-      defense: { bronze: false, silver: false, gold: false },
-      compute: { bronze: false, silver: false, gold: false }
-}));
-
-// Initialize localStorage defaults if missing
-function initializeBuildingContest() {
-  if (!localStorage.getItem("contestAvailability")) {
-    const defaultStatus = {
-      ai:    { bronze: false, silver: false, gold: false },
-      data:  { bronze: false, silver: false, gold: false },
-      defense: { bronze: false, silver: false, gold: false },
-      compute: { bronze: false, silver: false, gold: false }
-    };
-    localStorage.setItem("contestAvailability", JSON.stringify(defaultStatus));
-  }
-}
-
 // Update buttons based on contest state
 function applyContestStatus() {
-  const contestAvailability = JSON.parse(localStorage.getItem("contestAvailability") || "{}");
-  const userResources = JSON.parse(localStorage.getItem("resources") || "{}");
+  const contestAvailability = Storage.get("contestAvailability");
+  const userResources = Storage.get("resources");
 
   Object.entries(contestAvailability).forEach(([contestKey, levels]) => {
     const resourceName = resourceMap[contestKey]; // e.g., 'rawData' for 'ai'
@@ -58,8 +39,14 @@ function applyContestStatus() {
         button.disabled = false;
 
         button.addEventListener("click", () => {
-          localStorage.setItem("selectedBuilding", contestKey); // contestKey is 'ai', 'data', etc.
-          localStorage.setItem("selectedDifficulty", difficulty);
+          Storage.update("selectedBuilding", contestKey); // contestKey is 'ai', 'data', etc.
+          Storage.update("selectedDifficulty", difficulty);
+
+          const amount = resourceAvailable - entryCost;
+          const updatedResources = { ...userResources };
+          updatedResources[resourceName] = amount;
+          Storage.update("resources", updatedResources);
+          refreshResourcesUI();
 
           console.log(`Starting contest for ${contestKey} at ${difficulty} level`);
           loadComponent(`./components/arena/${contestKey}.html`).then(success => {
@@ -88,7 +75,7 @@ function applyContestStatus() {
 // Exported init function (matches your style)
 export function init() {
   requestAnimationFrame(() => {
-    initializeBuildingContest();
+    // initializeBuildingContest();
     applyContestStatus();
   });
 }
@@ -96,11 +83,11 @@ export function init() {
 // Exported update function to change contest status dynamically
 // setContestLevelAvailability('ai', 'bronze', true);
 export function setContestLevelAvailability(contestKey, level, value) {
-  const contestAvailability = JSON.parse(localStorage.getItem("contestAvailability") || "{}");
+  const contestAvailability = Storage.get("contestAvailability");
 
   if (contestAvailability[contestKey] && level in contestAvailability[contestKey]) {
     contestAvailability[contestKey][level] = value;
-    localStorage.setItem("contestAvailability", JSON.stringify(contestAvailability));
+    Storage.update("contestAvailability", JSON.stringify(contestAvailability));
     applyContestStatus();
   } else {
     console.warn(`Invalid contest or level: ${contestKey}.${level}`);

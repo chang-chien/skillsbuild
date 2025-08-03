@@ -1,4 +1,5 @@
 import { loadVillage } from './main.js';
+import { Storage } from './resources.js';
 
 export class ContestEngine {
   constructor(contestMap, contestTextEl, choiceBoxEl, type = 'ai') {
@@ -9,7 +10,7 @@ export class ContestEngine {
     this.questionOrder = [];
     this.currentQuizIndex = 0;
     this.incorrectCount = 0;
-    this.resources = JSON.parse(localStorage.getItem("resources")) || {};
+    this.resources = Storage.get("resources");
   }
 
   start() {
@@ -21,7 +22,24 @@ export class ContestEngine {
 
   initDialogue() {
     this.loadNextQuiz();
-    this.choiceBox.appendChild(nextBtn);
+    // this.choiceBox.appendChild(nextBtn);
+  }
+
+  updateScoreBar(isCorrect) {
+    const scoreFill = document.getElementById("score-fill");
+    const total = this.questionOrder.length;
+
+    // Calculate height increment per question
+    const increment = 100 / total;
+
+    // Get current heights as numbers
+    const currentCorrectHeight = parseFloat(scoreFill.style.height) || 0;
+
+    if (isCorrect) {
+      const newCorrectHeight = currentCorrectHeight + increment;
+      scoreFill.style.height = `${newCorrectHeight}%`;
+      scoreFill.style.backgroundColor = "#0f62fe"; // Blue
+    }
   }
 
   appendPlayerResponse(text) {
@@ -61,6 +79,8 @@ export class ContestEngine {
         this.appendPlayerResponse(optionText);
         const isCorrect = optionText === questionData.answer;
         if (!isCorrect) this.incorrectCount++;
+        this.updateScoreBar(isCorrect); 
+
         this.choiceBox.innerHTML = "";
         this.appendExplanation(isCorrect, questionData.explanation);
       };

@@ -11,27 +11,6 @@ const buildingKeyMap = {
   computeNode: 'compute'
 };
 
-// Initialize resources
-// localStorage.setItem("buildingUpgrade", JSON.stringify({
-//     aiCenter: true,
-//     dataCenter: false,
-//     defenceSystem: false,
-//     computeNode: false
-// }));
-
-// Initialize localStorage defaults if missing
-// function initializeBuildingUpgrade() {
-//   if (!localStorage.getItem("buildingUpgrade")) {
-//     const defaultUpgradeState = {
-//       aiCenter: false,
-//       dataCenter: false,
-//       defenceSystem: false,
-//       computeNode: false
-//     };
-//     localStorage.setItem("buildingUpgrade", JSON.stringify(defaultUpgradeState));
-//   }
-// }
-
 // Update buttons based on upgrade state
 function applyUpgradeStatus() {
   const upgradeStatus = Storage.get("buildingUpgrade");
@@ -52,7 +31,7 @@ function applyUpgradeStatus() {
 
         // Add click handler to redirect to quiz page
         button.addEventListener('click', async () => {
-          // Store the selected building in localStorage or URL
+          // Store the selected building in Storage or URL
           Storage.update('selectedBuilding', key);
           // Redirect to the quiz page
           const load = await loadComponent(`./components/academy/${key}.html`);

@@ -1,4 +1,5 @@
 import { loadVillage } from './main.js';
+import { Storage } from './resources.js';
 
 export class UpgradeEngine {
   constructor(upgradeMap, upgradeTextEl, choiceBoxEl, building = 'aiCenter', level = 'level01') {
@@ -10,7 +11,7 @@ export class UpgradeEngine {
     this.questionOrder = [];
     this.currentQuizIndex = 0;
     this.incorrectCount = 0;
-    this.resources = JSON.parse(localStorage.getItem("resources")) || {};
+    this.resources = Storage.get("resources");
   }
 
   start() {
@@ -43,6 +44,8 @@ export class UpgradeEngine {
     this.choiceBox.appendChild(nextBtn);
   }
 
+
+
   appendPlayerResponse(text) {
     this.upgradeText.innerHTML += `<p class="player-response">You: <strong>${text}</strong></p>`;
   }
@@ -50,8 +53,10 @@ export class UpgradeEngine {
   appendExplanation(isCorrect, text) {
     const resultText = isCorrect ? "✅ Correct!" : "❌ Not quite!";
     this.upgradeText.innerHTML += `<p><i>${resultText} ${text}</i></p><br><br>`;
-    this.currentQuizIndex++;
+    
 
+    this.currentQuizIndex++;
+    
     const nextBtn = document.createElement("button");
     nextBtn.innerText = "Next";
     nextBtn.classList.add("choice");
@@ -80,6 +85,7 @@ export class UpgradeEngine {
         this.appendPlayerResponse(optionText);
         const isCorrect = optionKey === quizData.correctAnswer;
         if (!isCorrect) this.incorrectCount++;
+        console.log(this.incorrectCount);
         this.choiceBox.innerHTML = ""; // Disable buttons after answering
         this.appendExplanation(isCorrect, quizData.explanation);
       };
@@ -94,6 +100,14 @@ export class UpgradeEngine {
       this.updateDialogue(this.questionOrder[this.currentQuizIndex]);
       console.log(this.questionOrder);
       console.log(this.currentQuizIndex);
+
+    } else if (this.incorrectCount > 2) {
+      this.upgradeText.innerHTML = `<p>😭 Defeat! But only by a hair, gather your strength and strike again.</p>`;
+      const backBtn = document.createElement("button");
+      backBtn.innerText = "Back to village";
+      backBtn.classList.add("choice");
+      backBtn.onclick = () => loadVillage();
+      this.choiceBox.appendChild(backBtn);
 
     } else {
       this.upgradeText.innerHTML = `<p>🎉 You've completed all the questions!</p>`;

@@ -61,7 +61,7 @@ export class DialogueEngine {
   updateResources(type, amount) {
     this.resources[type] += amount;
     Storage.update("resources", this.resources);
-    // Optionally display it on screen or store it in localStorage
+    // Optionally display it on screen or store it in Storage
     refreshResourcesUI(); 
   }
 

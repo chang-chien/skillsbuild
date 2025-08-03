@@ -1,5 +1,4 @@
 import { bindTutorialEvents } from './tutorial.js';
-import { Storage } from './resources.js';
 import { refreshResourcesUI } from './resources.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,21 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnOverview = document.getElementById('btn-village');
   if (btnOverview) {
     btnOverview.addEventListener('click', loadVillage);
-  }
-
-  const btnDataQuiz = document.getElementById('btn-data-quiz');
-  if (btnDataQuiz) {
-    btnDataQuiz.addEventListener('click', loadData);
-  }
-
-  const btnAcademyQuiz = document.getElementById('btn-academy-quiz');
-  if (btnAcademyQuiz) {
-    btnAcademyQuiz.addEventListener('click', loadAcademy);
-  }
-
-  const btnArena = document.getElementById('btn-arena-quiz');
-  if (btnArena) {
-    btnArena.addEventListener('click', loadArena);
   }
 
   const btnQuests = document.getElementById('btn-quests');
@@ -109,42 +93,6 @@ function attachBuildingListeners() {
         });        
       }
     });
-  });
-}
-
-// ⚙️ Load the data quiz scene
-function loadData() {
-  loadComponent('./components/questions/data.html');
-
-  // Dynamically import the module script (after DOM is updated)
-  import('./dialogue.js').then(module => {  
-    if (module && typeof module.init === 'function') {
-      module.init();
-    }
-  });
-}
-
-// ⚙️ Load the academy quiz scene
-function loadAcademy() {
-  loadComponent('./components/academy.html');
-
-  // Dynamically import the module script (after DOM is updated)
-  import('./upgrade.js').then(module => {  
-    if (module && typeof module.init === 'function') {
-      module.init();
-    }
-  });
-}
-
-// ⚙️ Load the academy quiz scene
-function loadArena() {
-  loadComponent('./components/arena.html');
-
-  // Dynamically import the module script (after DOM is updated)
-  import('./contest.js').then(module => {  
-    if (module && typeof module.init === 'function') {
-      module.init();
-    }
   });
 }
 

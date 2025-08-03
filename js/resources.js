@@ -14,22 +14,6 @@ export const Storage = {
     }
   },
 
-  // get(path) {
-  //   if (Array.isArray(path)) {
-  //     const [rootKey, ...nestedPath] = path;
-  //     const data = this.get(rootKey);
-  //     return nestedPath.reduce((obj, key) => obj?.[key], data);
-  //   }
-
-  //   const data = localStorage.getItem(path);
-  //   try {
-  //     return JSON.parse(data);
-  //   } catch (e) {
-  //     return data;
-  //   }
-  // },
-
-
   // Update specific fields inside an object
   update(key, updates) {
     const existing = Storage.get(key) || {};
@@ -62,7 +46,7 @@ export const Storage = {
 Storage.set("player-name", "Player");
 Storage.set("village-level", 1);
 Storage.set("resources", {
-  rawData: 0,
+  rawData: 10,
   dataPacket: 0,
   securityToken: 0,
   processingUnit: 0,

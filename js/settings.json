@@ -18,5 +18,11 @@
     "upgraded": true,
     "reviewedCourse": false,
     "reviewedWrong": false
+  },
+  "contestAvailability": {
+    "ai": { "bronze": false, "silver": false, "gold": false},
+    "data": { "bronze": false, "silver": false, "gold": false},
+    "defense": { "bronze": false, "silver": false, "gold": false},
+    "compute": { "bronze": false, "silver": false, "gold": false}
   }
 }

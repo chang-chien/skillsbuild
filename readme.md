@@ -29,6 +29,16 @@ Email: changchienterry@gmail.com
   - Add AI course
   - Switch function of Academic (learning) & AI cneter (building upgrade)
   - Version of interviewee 1 & 2 
+- release 2.1
+  - Add label to explain resources
+  - Add one page tutorial 
+  - Modify the background (make the disabled building darker)
+  - Version of interviewee 3 & 4 
+- release 2.2
+  - Update tutorial to 3 pages
+  - Add local storage CRUD
+  - Add user name input
+  - Version of interviewee 5 & 6 
 
 ## Design Inspirations
 
@@ -37,6 +47,13 @@ Tribal War: https://www.tribalwars.co.uk/
 知識王 Brave Knight: https://www.brave-knight.com/index-zh.html
 
 記帳城市 Sparkful: https://sparkful.app/zh-TW/fortune-city
+
+### Tools
+Avatar Generate: https://donjon.bin.sh/avatar/npc/
+
+Image Generate: https://labs.google/fx/zh/tools/image-fx
+
+
 
 ### Credits
 - @John McNamara from IBM for providing the opportunity of collaboration

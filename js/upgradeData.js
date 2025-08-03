@@ -15,7 +15,7 @@ export const upgradeMapData = {
             ],
             quizes: {
                 quiz01: {
-                    question: "Which of the following is a key attribute of an artificial intelligence system?",
+                    question: "<b>01/15</b><br>Which of the following is a key attribute of an artificial intelligence system?",
                     options: {
                         option01: "AI systems can judge.",
                         option02: "AI systems make predictions.",
@@ -26,7 +26,7 @@ export const upgradeMapData = {
                     explanation: "AI systems make predictions based on data analysis and calculations."
                 },
                 quiz02: {
-                    question: "In which of the following eras of computing did an IBM system beat a chess champion, a robot drive itself down a 131-mile desert trail, and IBM Watson beat two Jeopardy! grand champions?",
+                    question: "<b>02/15</b><br>In which of the following eras of computing did an IBM system beat a chess champion, a robot drive itself down a 131-mile desert trail, and IBM Watson beat two Jeopardy! grand champions?",
                     options: {
                         option01: "Era of Programming",
                         option02: "Era of AI",
@@ -36,7 +36,7 @@ export const upgradeMapData = {
                     explanation: "All of those events occurred in the Era of AI. In 1997, IBM’s Deep Blue beat the world’s chess champion by processing over 200 million possible moves per second. In 2005, a Stanford University robot drove itself down a 131-mile desert trail. And in 2011, IBM’s Watson defeated two grand champions in the game of Jeopardy!"
                 },
                 quiz03: {
-                    question: "Which level of AI refers to machines that can perform any intellectual task that a human can?",
+                    question: "<b>03/15</b><br>Which level of AI refers to machines that can perform any intellectual task that a human can?",
                     options: {
                         option01: "Narrow AI",
                         option02: "Broad AI",
@@ -46,7 +46,7 @@ export const upgradeMapData = {
                     explanation: "General AI refers to machines that can perform any intellectual task that a human can. Unlike Narrow AI, which is limited to specific tasks, General AI has the ability to think abstractly, strategize, and use previous experiences to come up with new ideas."
                 },
                 quiz04: {
-                    question: "Which of the following methods of learning describes how an AI system learns using trial and error?",
+                    question: "<b>04/15</b><br>Which of the following methods of learning describes how an AI system learns using trial and error?",
                     options: {
                         option01: "Supervised learning",
                         option02: "Reinforcement learning",
@@ -56,7 +56,7 @@ export const upgradeMapData = {
                     explanation: "Reinforcement learning is a machine learning model similar to supervised learning, but the algorithm isn’t trained using sample data. The model learns as it goes by using trial and error."
                 },
                 quiz05: {
-                    question: "Which of the following types of data can be analyzed more quickly by machine learning than by a programmable computer?",
+                    question: "<b>05/15</b><br>Which of the following types of data can be analyzed more quickly by machine learning than by a programmable computer?",
                     options: {
                         option01: "Structured",
                         option02: "Systematic",
@@ -67,7 +67,7 @@ export const upgradeMapData = {
                     explanation: "Machine learning can analyze unstructured data more quickly than a programmable computer because machine learning doesn’t rely on programming instructions to work with unstructured data."
                 },
                 quiz06: {
-                    question: "Which of the following is an example of structured data?",
+                    question: "<b>06/15</b><br>Which of the following is an example of structured data?",
                     options: {
                         option01: "Videos",
                         option02: "Flight schedules",
@@ -78,7 +78,7 @@ export const upgradeMapData = {
                     explanation: "Structured data is typically information that can be organized in rows and columns, such as flight schedules that include departure times, arrival times, and flight numbers."
                 },
                 quiz07: {
-                    question: "Which of the following is a likely consequence of AI becoming more pervasive across industries?",
+                    question: "<b>07/15</b><br>Which of the following is a likely consequence of AI becoming more pervasive across industries?",
                     options: {
                         option01: "Reliance on current machine interface technologies will strengthened",
                         option02: "Humans and machine interactions will become increasingly standardized",
@@ -89,7 +89,7 @@ export const upgradeMapData = {
                     explanation: "AI everywhere suggests that as AI moves into all industries, from finance, to education, to healthcare it will promote productivity and enable new opportunities for everyone."
                 },
                 quiz08: {
-                    question: "Which of the following explains why an AI trained with machine learning can rapidly map the best route between two points on a map?",
+                    question: "<b>08/15</b><br>Which of the following explains why an AI trained with machine learning can rapidly map the best route between two points on a map?",
                     options: {
                         option01: "It relies on a complete database of all possible routes through the city.",
                         option02: "It predicts traffic problems based on stored alternative routes for every possible situation.",
@@ -100,7 +100,7 @@ export const upgradeMapData = {
                     explanation: "An AI trained with machine learning approaches the problem of finding the best route like climbing a tree, trying different routes and comparing successful ones to identify the shortest route. This process involves performing millions of tiny calculations quickly through trial and error."
                 },
                 quiz09: {
-                    question: "You’re working for an employer who wants to learn from social media what customers say about her products and services. Which of the following is the best reason to support moving to an AI system?",
+                    question: "<b>09/15</b><br>You’re working for an employer who wants to learn from social media what customers say about her products and services. Which of the following is the best reason to support moving to an AI system?",
                     options: {
                         option01: "Social media data is completely structured.",
                         option02: "Social media data contains a mix of structured and unstructured data.",
@@ -112,7 +112,7 @@ export const upgradeMapData = {
                 },
 
                 quiz10: {
-                    question: "Which of the following acts on behalf of people in the physical world in a way that complements human abilities?",
+                    question: "<b>10/15</b><br>Which of the following acts on behalf of people in the physical world in a way that complements human abilities?",
                     options: {
                         option01: "Machine learning algorithms",
                         option02: "Augmented intelligence",
@@ -124,7 +124,7 @@ export const upgradeMapData = {
                 },
 
                 quiz11: {
-                    question: "Which of the following is the level of AI that is more versatile, can handle a wider range of related tasks, and is focused on integrating AI within specific business processes?",
+                    question: "<b>11/15</b><br>Which of the following is the level of AI that is more versatile, can handle a wider range of related tasks, and is focused on integrating AI within specific business processes?",
                     options: {
                         option01: "General AI",
                         option02: "Broad AI",
@@ -135,7 +135,7 @@ export const upgradeMapData = {
                 },
 
                 quiz12: {
-                    question: "You are working on an AI system to help doctors treat patients. While describing your system to a group of doctors, you are asked the following question, 'How does machine learning enable decision-making in complex scenarios, such as medical treatment choices?' Which of the following is the best response?",
+                    question: "<b>12/15</b><br>You are working on an AI system to help doctors treat patients. While describing your system to a group of doctors, you are asked the following question, 'How does machine learning enable decision-making in complex scenarios, such as medical treatment choices?' Which of the following is the best response?",
                     options: {
                         option01: "By providing probabilistic statements with confidence levels for different treatment options",
                         option02: "By ignoring potential outcomes and personal experience in decision making",
@@ -147,7 +147,7 @@ export const upgradeMapData = {
                 },
 
                 quiz13: {
-                    question: "Which of the following types of data is categorized as qualitative data, and cannot be processed and analyzed by conventional data tools and methods?",
+                    question: "<b>13/15</b><br>Which of the following types of data is categorized as qualitative data, and cannot be processed and analyzed by conventional data tools and methods?",
                     options: {
                         option01: "Structured data",
                         option02: "Semi-structured data",
@@ -159,7 +159,7 @@ export const upgradeMapData = {
                 },
 
                 quiz14: {
-                    question: "Which of the following describes how machine learning differs from classical systems in structuring unstructured data?",
+                    question: "<b>14/15</b><br>Which of the following describes how machine learning differs from classical systems in structuring unstructured data?",
                     options: {
                         option01: "Machine learning relies on deterministic algorithms to process unstructured data.",
                         option02: "Machine learning constructs a predetermined structure of routes based on a database.",
@@ -171,7 +171,7 @@ export const upgradeMapData = {
                 },
 
                 quiz15: {
-                    question: "Which of the following statements most accurately describes semi-structured data?",
+                    question: "<b>15/15</b><br>Which of the following statements most accurately describes semi-structured data?",
                     options: {
                         option01: "Data that combines features of both structured and unstructured data, using metadata for organization",
                         option02: "Quantitative data processed and analyzed by conventional data tools",

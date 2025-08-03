@@ -9,25 +9,24 @@ const buildingClass = 'ai';     // CSS class for AI Center button
 const buildingLevel = 'level01';
 
 // Initialize only AI Center upgrade state
-function initializeAICenterUpgrade() {
-  if (!localStorage.getItem("aiCenterUpgrade")) {
-    const defaultUpgradeState = {
-      upgraded: true,
-      reviewedCourse: false,
-      reviewedWrong: false
-    };
-    localStorage.setItem("aiCenterUpgrade", JSON.stringify(defaultUpgradeState));
-  }
+// function initializeAICenterUpgrade() {
+//   if (!Storage.getItem("aiCenterUpgrade")) {
+//     const defaultUpgradeState = {
+//       upgraded: true,
+//       reviewedCourse: false,
+//       reviewedWrong: false
+//     };
+//     Storage.setItem("aiCenterUpgrade", JSON.stringify(defaultUpgradeState));
+//   }
   
-}
+// }
 
-// Update button states based on localStorage
+// Update button states based on Storage
 function applyAICenterStatus() {
-  const aiCenterStatus = JSON.parse(localStorage.getItem("aiCenterUpgrade") || "{}");
+  const aiCenterStatus = Storage.get("aiCenterUpgrade");
 
   // --- Upgrade Button ---
   const upgradeBtn = document.querySelector(`.upgrade-button.${buildingClass}`);
-  console.log("Upgrade Button:", upgradeBtn, "Status:", aiCenterStatus.upgraded);
   if (upgradeBtn) {
     if (aiCenterStatus.upgraded) {
       upgradeBtn.classList.remove("disabled");
@@ -74,11 +73,10 @@ function applyAICenterStatus() {
 
 // Handles upgrade button click
 async function handleUpgradeClick() {
-  // localStorage.setItem('selectedBuilding', buildingKey);
+  // Storage.setItem('selectedBuilding', buildingKey);
   const load = await loadComponent(`./components/upgrade/${buildingKey}.html`);
   if (load) {
     let rawData = Storage.get("resources").rawData;
-    console.log(Storage.get("resources"));
     rawData = rawData - 50;
     Storage.update("resources", { rawData: rawData });
     refreshResourcesUI();
@@ -96,13 +94,13 @@ async function handleUpgradeClick() {
 
 // Handles reviewing course materials
 async function handleReviewCourseClick() {
-  localStorage.setItem("aiCenterLastAction", "reviewCourse");
+  Storage.update("aiCenterLastAction", "reviewCourse");
   await loadComponent(`./components/building/${buildingKey}_course.html`);
 }
 
 // Handles reviewing wrong questions
 async function handleReviewWrongClick() {
-  localStorage.setItem("aiCenterLastAction", "reviewWrong");
+  Storage.update("aiCenterLastAction", "reviewWrong");
   await loadComponent(`./components/building/${buildingKey}_wrong.html`);
 }
 
@@ -110,17 +108,17 @@ async function handleReviewWrongClick() {
 export function init() {
   console.log("Initializing AI Center buttons");
   requestAnimationFrame(() => {
-    initializeAICenterUpgrade();
+    // initializeAICenterUpgrade();
     applyAICenterStatus();
   });
 }
 
 // Update AI Center upgrade state
 export function setAICenterStatus(key, value) {
-  const aiCenterStatus = JSON.parse(localStorage.getItem("aiCenterUpgrade") || "{}");
+  const aiCenterStatus = Storage.get("aiCenterUpgrade");
   if (key in aiCenterStatus) {
     aiCenterStatus[key] = value;
-    localStorage.setItem("aiCenterUpgrade", JSON.stringify(aiCenterStatus));
+    Storage.update("aiCenterUpgrade", JSON.stringify(aiCenterStatus));
     applyAICenterStatus();
   } else {
     console.warn(`Invalid AI Center status key: ${key}`);
