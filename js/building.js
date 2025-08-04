@@ -1,6 +1,7 @@
 import { loadComponent } from './main.js';
 import { Storage } from './resources.js';
 import { refreshResourcesUI } from './resources.js';
+import { playClickSound } from './resources.js';
 import { UpgradeEngine } from './upgradeEngine.js';
 
 let upgradeEngine = null;
@@ -32,6 +33,7 @@ function applyAICenterStatus() {
       upgradeBtn.classList.remove("disabled");
       upgradeBtn.disabled = false;
       upgradeBtn.addEventListener('click', async () => {
+        playClickSound();
         await handleUpgradeClick();
       });
     } else {
@@ -47,6 +49,7 @@ function applyAICenterStatus() {
       courseBtn.classList.remove("disabled");
       courseBtn.disabled = false;
       courseBtn.addEventListener('click', async () => {
+        playClickSound();
         await handleReviewCourseClick();
       });
     } else {
@@ -62,6 +65,7 @@ function applyAICenterStatus() {
       wrongBtn.classList.remove("disabled");
       wrongBtn.disabled = false;
       wrongBtn.addEventListener('click', async () => {
+        playClickSound();
         await handleReviewWrongClick();
       });
     } else {

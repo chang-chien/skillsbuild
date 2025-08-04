@@ -1,5 +1,6 @@
 import { bindTutorialEvents } from './tutorial.js';
 import { refreshResourcesUI } from './resources.js';
+import { playClickSound } from './resources.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   loadTutorial(); // Load tutorial by default
@@ -71,7 +72,8 @@ function attachBuildingListeners() {
   const buildings = document.querySelectorAll('.building');
   buildings.forEach(building => {
     building.addEventListener('click', async () => {
-
+      playClickSound();
+      
       const buildingId = building.id; // e.g., "compute", "data", etc.
       const buildingType = building.getAttribute("data-type"); // e.g., "upgrade", "contest", "info"
 

@@ -1,6 +1,7 @@
 import { loadComponent } from './main.js';
 import { loadVillage } from './main.js';
 import { Storage } from './resources.js';
+import { playClickSound } from './resources.js';
 import { refreshResourcesUI } from './resources.js';
 
 export function bindTutorialEvents() {
@@ -8,7 +9,7 @@ export function bindTutorialEvents() {
   const btn0 = document.querySelector('#tutorial00');
   if (btn0) {
     btn0.addEventListener('click', async () => {
-
+      playClickSound();
       const input = document.getElementById("leaderNameInput");
       const name = input.value.trim();
       console.log("Entered name:", name);
@@ -32,6 +33,7 @@ export function bindTutorialEvents() {
   const btn1back = document.getElementById('tutorial_01_back');
   if (btn1back) {
     btn1back.addEventListener('click', async () => {
+      playClickSound();
       const loaded = await loadComponent('./components/tutorial/tutorial.html', 'game-container');
       if (loaded) {
         // Wait for the content to load, then bind again
@@ -43,6 +45,7 @@ export function bindTutorialEvents() {
   const btn1next = document.getElementById('tutorial_01_next');
   if (btn1next) {
     btn1next.addEventListener('click', async () => {
+      playClickSound();
       const loaded = await loadComponent('./components/tutorial/tutorial02.html', 'game-container');
       if (loaded) {
         // Wait for the content to load, then bind again
@@ -55,6 +58,7 @@ export function bindTutorialEvents() {
   const btn2back = document.getElementById('tutorial_02_back');
   if (btn2back) {
     btn2back.addEventListener('click', async () => {
+      playClickSound();
       const loaded = await loadComponent('./components/tutorial/tutorial01.html', 'game-container');
       if (loaded) {
         bindTutorialEvents();
@@ -65,6 +69,7 @@ export function bindTutorialEvents() {
   const btn2next = document.getElementById('tutorial_02_next');
   if (btn2next) {
     btn2next.addEventListener('click', async () => {
+      playClickSound();
       const loaded = await loadComponent('./components/tutorial/tutorial03.html', 'game-container');
       if (loaded) {
         bindTutorialEvents();
@@ -76,6 +81,7 @@ export function bindTutorialEvents() {
   const btn3back = document.getElementById('tutorial_03_back');
   if (btn3back) {
     btn3back.addEventListener('click', async () => {
+      playClickSound();
       const loaded = await loadComponent('./components/tutorial/tutorial02.html', 'game-container');
       if (loaded) {
         bindTutorialEvents();
@@ -86,6 +92,7 @@ export function bindTutorialEvents() {
   const btn3next = document.getElementById('tutorial_03_next');
   if (btn3next) {
     btn3next.addEventListener('click', async () => {
+      playClickSound();
       const loaded = await loadComponent('./components/tutorial/tutorialEnd.html', 'game-container');
       if (loaded) {
         bindTutorialEvents();
@@ -106,6 +113,7 @@ export function bindTutorialEvents() {
   const btn4back = document.getElementById('tutorial_04_back');
   if (btn4back) {
     btn4back.addEventListener('click', async () => {
+      playClickSound();
       const loaded = await loadComponent('./components/tutorial/tutorial03.html', 'game-container');
       if (loaded) {
         bindTutorialEvents();
@@ -116,6 +124,7 @@ export function bindTutorialEvents() {
   const btn4next = document.getElementById('tutorial_04_next');
   if (btn4next) {
     btn4next.addEventListener('click', () => {
+      playClickSound();
       loadVillage();
     });
   }

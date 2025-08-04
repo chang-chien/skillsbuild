@@ -75,6 +75,7 @@ Storage.set("aiCenterUpgrade", {
 // DELETE
 // Storage.remove("aiCenterUpgrade");
 
+// import { refreshResourcesUI } from './resources.js';
 export function refreshResourcesUI() {
   const resources = Storage.get("resources");
   
@@ -83,4 +84,13 @@ export function refreshResourcesUI() {
   document.getElementById("security-token-count").textContent = resources.securityToken;
   document.getElementById("processing-unit-count").textContent = resources.processingUnit;
   document.getElementById("electricity-count").textContent = resources.electricity;
+}
+
+// import { playClickSound } from './resources.js';
+const clickSound = new Audio('./assets/audio/click.m4a');
+clickSound.volume = 1; // 50% volume
+
+export function playClickSound() {
+  clickSound.currentTime = 0;
+  clickSound.play();
 }

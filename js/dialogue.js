@@ -1,6 +1,7 @@
 import { loadComponent } from './main.js';
 import { DialogueEngine } from './dialogueEngine.js';
 import { Storage } from './resources.js';
+import { playClickSound } from './resources.js';
 
 let dialogueEngine = null;
 
@@ -31,6 +32,7 @@ function applyUpgradeStatus() {
 
         // Add click handler to redirect to quiz page
         button.addEventListener('click', async () => {
+          playClickSound();
           // Store the selected building in Storage or URL
           Storage.update('selectedBuilding', key);
           // Redirect to the quiz page

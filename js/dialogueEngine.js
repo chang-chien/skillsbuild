@@ -1,5 +1,6 @@
 import { Storage } from './resources.js';
 import { refreshResourcesUI } from './resources.js';
+import { playClickSound } from './resources.js';
 import { loadVillage } from './main.js';
 
 const buildingToResource = {
@@ -114,7 +115,7 @@ export class DialogueEngine {
       this.choiceBox.appendChild(btn);
 
       btn.addEventListener('click', () => {
-        
+        playClickSound();
         this.appendPlayerResponse(choice.label);
 
         if (choice.skipTo) {
@@ -147,6 +148,7 @@ export class DialogueEngine {
             retryBtn.classList.add('choice');
             retryBtn.textContent = "Back to Village";
             retryBtn.addEventListener('click', () => {
+              playClickSound();
               loadVillage();
             });
             this.choiceBox.appendChild(retryBtn);
@@ -170,6 +172,7 @@ export class DialogueEngine {
             retryBtn.classList.add('choice');
             retryBtn.textContent = "Retry Quiz";
             retryBtn.addEventListener('click', () => {
+              playClickSound();
               this.start();
               this.incorrectCount = 0;
               this.quizFailed = false;
@@ -219,6 +222,7 @@ export class DialogueEngine {
       btn.textContent = choice.label;
 
       btn.addEventListener('click', () => {
+        playClickSound();
         this.appendPlayerResponse(choice.label);
         if (choice.next === 'backToVillage') {
           loadVillage();
@@ -235,6 +239,7 @@ export class DialogueEngine {
             retryBtn.classList.add('choice');
             retryBtn.textContent = "Back to Village";
             retryBtn.addEventListener('click', () => {
+              playClickSound();
               loadVillage();
             });
             this.choiceBox.appendChild(retryBtn);

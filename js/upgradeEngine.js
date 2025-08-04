@@ -103,6 +103,7 @@ export class UpgradeEngine {
 
     } else if (this.incorrectCount > 2) {
       this.upgradeText.innerHTML = `<p>😭 Defeat! But only by a hair, gather your strength and strike again.</p>`;
+      this.choiceBox.innerHTML = ""; // Disable buttons after answering
       const backBtn = document.createElement("button");
       backBtn.innerText = "Back to village";
       backBtn.classList.add("choice");
